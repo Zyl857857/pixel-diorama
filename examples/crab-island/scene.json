@@ -1,0 +1,8819 @@
+{
+  "title": "断潮岛 · 巨钳守卫",
+  "seed": 48103,
+  "locale": "zh-CN",
+  "background": "#0c1825",
+  "sun": [
+    -0.78,
+    1,
+    0.8
+  ],
+  "spacing": 0.087,
+  "camera": {
+    "target": [
+      0,
+      0.95,
+      -0.02
+    ],
+    "dist": 16.5,
+    "yaw": 0.24,
+    "pitch": 0.5
+  },
+  "terrain": {
+    "radius": [
+      6.35,
+      5
+    ],
+    "height": 0.3,
+    "depth": 0.55,
+    "roughness": 0.155,
+    "edge": 0.1,
+    "surface": "beach",
+    "cliff": "deep",
+    "capCliff": "deep",
+    "pathMaterial": "stone",
+    "pathWidth": 0.25,
+    "hills": [
+      [
+        -2.8,
+        -2.1,
+        0.52,
+        1.38,
+        1.04
+      ],
+      [
+        2.6,
+        -1.94,
+        0.27,
+        1.4,
+        1.02
+      ],
+      [
+        0,
+        -1.3,
+        0.1,
+        2.1,
+        1.5
+      ]
+    ]
+  },
+  "water": {
+    "center": [
+      0,
+      0
+    ],
+    "radius": [
+      6.35,
+      5
+    ],
+    "level": -0.025,
+    "baseLevel": -0.025,
+    "island": {
+      "radius": [
+        4.45,
+        3.58
+      ],
+      "foam": "foam"
+    },
+    "shore": "beach",
+    "floor": "deep",
+    "dark": "#133d58",
+    "light": "#54c8c4",
+    "reflection": 0.19,
+    "rippleA": [
+      -3.94,
+      2.4
+    ],
+    "rippleB": [
+      4.11,
+      1.98
+    ]
+  },
+  "materials": {
+    "deep": {
+      "ramp": [
+        "#0b2438",
+        "#13384e",
+        "#1c5062",
+        "#2b7180"
+      ],
+      "pattern": "strata",
+      "texture": 0.56
+    },
+    "beach": {
+      "ramp": [
+        "#503637",
+        "#80604d",
+        "#ad8a64",
+        "#d8b683",
+        "#f1ca90"
+      ],
+      "texture": 0.46
+    },
+    "stone": {
+      "ramp": [
+        "#172434",
+        "#2b3a45",
+        "#485656",
+        "#6e7163",
+        "#9b9981"
+      ],
+      "texture": 0.63,
+      "pattern": "strata"
+    },
+    "foam": {
+      "ramp": [
+        "#61a9ac",
+        "#aee8d7",
+        "#e3f7dc"
+      ],
+      "glow": true
+    },
+    "shell": {
+      "ramp": [
+        "#39162b",
+        "#66213a",
+        "#a33947",
+        "#d55247",
+        "#f57551"
+      ],
+      "texture": 0.42
+    },
+    "lacquer": {
+      "ramp": [
+        "#662739",
+        "#a83d43",
+        "#e35f4c",
+        "#f9915a",
+        "#ffb474"
+      ],
+      "texture": 0.34
+    },
+    "joint": {
+      "ramp": [
+        "#1c1a2b",
+        "#362238",
+        "#582938",
+        "#86433f"
+      ],
+      "texture": 0.28
+    },
+    "gold": {
+      "ramp": [
+        "#61423e",
+        "#b67b48",
+        "#e9a75d",
+        "#ffe19a"
+      ],
+      "texture": 0.28
+    },
+    "shine": {
+      "ramp": [
+        "#ffb474",
+        "#ffe19a",
+        "#fff3c6"
+      ],
+      "glow": true
+    },
+    "leaf": {
+      "ramp": [
+        "#15393c",
+        "#255c52",
+        "#438268",
+        "#7aa378"
+      ],
+      "texture": 0.49
+    },
+    "wood": {
+      "ramp": [
+        "#342737",
+        "#64423d",
+        "#99674b",
+        "#c38c5f"
+      ],
+      "pattern": "planks",
+      "texture": 0.32
+    },
+    "steel": {
+      "ramp": [
+        "#263b57",
+        "#50718a",
+        "#87aeb1",
+        "#c6d6cc",
+        "#e3f7dc"
+      ],
+      "texture": 0.24
+    },
+    "cloth": {
+      "ramp": [
+        "#123756",
+        "#165a7a",
+        "#2e94a3",
+        "#65c7c5"
+      ],
+      "texture": 0.28
+    }
+  },
+  "clearPaths": [
+    [
+      [
+        -1.28,
+        3.03
+      ],
+      [
+        -0.28,
+        2.15
+      ],
+      [
+        0.15,
+        1.15
+      ],
+      [
+        0.22,
+        0.54
+      ]
+    ]
+  ],
+  "scatter": [
+    {
+      "id": "lava-pebbles",
+      "kind": "rock",
+      "bounds": [
+        -4,
+        -3.2,
+        4,
+        3.1
+      ],
+      "count": 25,
+      "material": "stone",
+      "minSize": 0.09,
+      "maxSize": 0.3,
+      "waterMin": 0.07,
+      "clearance": 0.8,
+      "separation": 0.41
+    },
+    {
+      "id": "dune-reeds",
+      "kind": "reed",
+      "bounds": [
+        -4,
+        -3,
+        4,
+        3
+      ],
+      "count": 21,
+      "material": "leaf",
+      "minSize": 0.11,
+      "maxSize": 0.34,
+      "waterMin": 0.08,
+      "waterMax": 0.26,
+      "clearance": 1,
+      "separation": 0.26
+    }
+  ],
+  "lights": [
+    {
+      "at": [
+        0,
+        2.42,
+        0.6
+      ],
+      "color": "#ff8154",
+      "radius": 1.4,
+      "gain": 0.49
+    },
+    {
+      "at": [
+        -0.5,
+        0.71,
+        2.39
+      ],
+      "color": "#79dad7",
+      "radius": 1.2,
+      "gain": 0.49
+    }
+  ],
+  "shapes": [
+    {
+      "id": "abdomen",
+      "kind": "rock",
+      "at": [
+        0,
+        1.64,
+        -0.97
+      ],
+      "material": "joint",
+      "size": [
+        2.66,
+        1.25,
+        1.73
+      ],
+      "accent": "shell",
+      "spacing": 0.058,
+      "shadow": 2.2,
+      "keepOut": 2.35
+    },
+    {
+      "id": "carapace-rim",
+      "kind": "rock",
+      "at": [
+        0,
+        2.1,
+        -1
+      ],
+      "material": "shell",
+      "size": [
+        3.16,
+        0.69,
+        2.09
+      ],
+      "accent": "lacquer",
+      "spacing": 0.058
+    },
+    {
+      "id": "carapace-crown",
+      "kind": "rock",
+      "at": [
+        0,
+        2.29,
+        -1.22
+      ],
+      "material": "shell",
+      "size": [
+        2.83,
+        1.02,
+        1.81
+      ],
+      "accent": "lacquer",
+      "spacing": 0.056,
+      "yaw": -0.06
+    },
+    {
+      "id": "carapace-saddle",
+      "kind": "rock",
+      "at": [
+        0,
+        2.52,
+        -1.3599999999999999
+      ],
+      "material": "lacquer",
+      "size": [
+        1.58,
+        0.69,
+        0.92
+      ],
+      "accent": "shell",
+      "spacing": 0.056
+    },
+    {
+      "id": "keel--1-0",
+      "kind": "rock",
+      "at": [
+        -0.58,
+        2.48,
+        -1.61
+      ],
+      "material": "shell",
+      "size": [
+        0.42,
+        0.31,
+        0.51
+      ],
+      "accent": "lacquer",
+      "spacing": 0.053,
+      "yaw": -0.33
+    },
+    {
+      "id": "keel--1-1",
+      "kind": "rock",
+      "at": [
+        -0.7549999999999999,
+        2.434,
+        -1.35
+      ],
+      "material": "shell",
+      "size": [
+        0.42,
+        0.31,
+        0.51
+      ],
+      "accent": "lacquer",
+      "spacing": 0.053,
+      "yaw": -0.33
+    },
+    {
+      "id": "keel--1-2",
+      "kind": "rock",
+      "at": [
+        -0.9299999999999999,
+        2.388,
+        -1.09
+      ],
+      "material": "shell",
+      "size": [
+        0.42,
+        0.31,
+        0.51
+      ],
+      "accent": "lacquer",
+      "spacing": 0.053,
+      "yaw": -0.33
+    },
+    {
+      "id": "keel--1-3",
+      "kind": "rock",
+      "at": [
+        -1.105,
+        2.342,
+        -0.8300000000000001
+      ],
+      "material": "shell",
+      "size": [
+        0.42,
+        0.31,
+        0.51
+      ],
+      "accent": "lacquer",
+      "spacing": 0.053,
+      "yaw": -0.33
+    },
+    {
+      "id": "keel--1-4",
+      "kind": "rock",
+      "at": [
+        -1.2799999999999998,
+        2.296,
+        -0.5700000000000001
+      ],
+      "material": "shell",
+      "size": [
+        0.42,
+        0.31,
+        0.51
+      ],
+      "accent": "lacquer",
+      "spacing": 0.053,
+      "yaw": -0.33
+    },
+    {
+      "id": "shell-spike--1-0-0",
+      "kind": "beam",
+      "at": [
+        -0.99,
+        2.33,
+        -1.63
+      ],
+      "material": "shell",
+      "to": [
+        -1.15,
+        2.57,
+        -1.73
+      ],
+      "radius": 0.23,
+      "spacing": 0.056,
+      "endRadius": 0.14
+    },
+    {
+      "id": "shell-spike--1-0-1",
+      "kind": "beam",
+      "at": [
+        -1.15,
+        2.57,
+        -1.73
+      ],
+      "material": "shell",
+      "to": [
+        -1.27,
+        2.79,
+        -1.7999999999999998
+      ],
+      "radius": 0.14,
+      "spacing": 0.056,
+      "endRadius": 0.026
+    },
+    {
+      "id": "shell-spike--1-0-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -1.15,
+        2.57,
+        -1.73
+      ],
+      "material": "shell",
+      "size": [
+        0.3052,
+        0.3052,
+        0.3052
+      ],
+      "spacing": 0.056
+    },
+    {
+      "id": "shell-spike--1-1-0",
+      "kind": "beam",
+      "at": [
+        -1.14,
+        2.33,
+        -1.2899999999999998
+      ],
+      "material": "shell",
+      "to": [
+        -1.2999999999999998,
+        2.57,
+        -1.39
+      ],
+      "radius": 0.23,
+      "spacing": 0.056,
+      "endRadius": 0.14
+    },
+    {
+      "id": "shell-spike--1-1-1",
+      "kind": "beam",
+      "at": [
+        -1.2999999999999998,
+        2.57,
+        -1.39
+      ],
+      "material": "shell",
+      "to": [
+        -1.42,
+        2.71,
+        -1.4599999999999997
+      ],
+      "radius": 0.14,
+      "spacing": 0.056,
+      "endRadius": 0.026
+    },
+    {
+      "id": "shell-spike--1-1-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -1.2999999999999998,
+        2.57,
+        -1.39
+      ],
+      "material": "shell",
+      "size": [
+        0.3052,
+        0.3052,
+        0.3052
+      ],
+      "spacing": 0.056
+    },
+    {
+      "id": "shell-spike--1-2-0",
+      "kind": "beam",
+      "at": [
+        -1.29,
+        2.33,
+        -0.9499999999999998
+      ],
+      "material": "shell",
+      "to": [
+        -1.45,
+        2.57,
+        -1.0499999999999998
+      ],
+      "radius": 0.23,
+      "spacing": 0.056,
+      "endRadius": 0.14
+    },
+    {
+      "id": "shell-spike--1-2-1",
+      "kind": "beam",
+      "at": [
+        -1.45,
+        2.57,
+        -1.0499999999999998
+      ],
+      "material": "shell",
+      "to": [
+        -1.57,
+        2.63,
+        -1.1199999999999999
+      ],
+      "radius": 0.14,
+      "spacing": 0.056,
+      "endRadius": 0.026
+    },
+    {
+      "id": "shell-spike--1-2-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -1.45,
+        2.57,
+        -1.0499999999999998
+      ],
+      "material": "shell",
+      "size": [
+        0.3052,
+        0.3052,
+        0.3052
+      ],
+      "spacing": 0.056
+    },
+    {
+      "id": "shell-spike--1-3-0",
+      "kind": "beam",
+      "at": [
+        -1.44,
+        2.33,
+        -0.6099999999999999
+      ],
+      "material": "shell",
+      "to": [
+        -1.5999999999999999,
+        2.57,
+        -0.7099999999999999
+      ],
+      "radius": 0.23,
+      "spacing": 0.056,
+      "endRadius": 0.14
+    },
+    {
+      "id": "shell-spike--1-3-1",
+      "kind": "beam",
+      "at": [
+        -1.5999999999999999,
+        2.57,
+        -0.7099999999999999
+      ],
+      "material": "shell",
+      "to": [
+        -1.72,
+        2.55,
+        -0.7799999999999999
+      ],
+      "radius": 0.14,
+      "spacing": 0.056,
+      "endRadius": 0.026
+    },
+    {
+      "id": "shell-spike--1-3-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -1.5999999999999999,
+        2.57,
+        -0.7099999999999999
+      ],
+      "material": "shell",
+      "size": [
+        0.3052,
+        0.3052,
+        0.3052
+      ],
+      "spacing": 0.056
+    },
+    {
+      "id": "walking-leg--1-0-upper-0",
+      "kind": "beam",
+      "at": [
+        -1.05,
+        1.66,
+        -0.57
+      ],
+      "material": "shell",
+      "to": [
+        -2.03,
+        1.57,
+        -0.23
+      ],
+      "radius": 0.3,
+      "spacing": 0.063,
+      "endRadius": 0.21
+    },
+    {
+      "id": "walking-leg--1-0-socket",
+      "kind": "rock",
+      "at": [
+        -2.03,
+        1.57,
+        -0.23
+      ],
+      "material": "joint",
+      "size": [
+        0.5,
+        0.48,
+        0.45
+      ],
+      "accent": "lacquer",
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg--1-0-lower-0",
+      "kind": "beam",
+      "at": [
+        -2.03,
+        1.57,
+        -0.23
+      ],
+      "material": "shell",
+      "to": [
+        -2.58,
+        0.73,
+        0.09
+      ],
+      "radius": 0.21,
+      "spacing": 0.059,
+      "endRadius": 0.124
+    },
+    {
+      "id": "walking-leg--1-0-lower-1",
+      "kind": "beam",
+      "at": [
+        -2.58,
+        0.73,
+        0.09
+      ],
+      "material": "shell",
+      "to": [
+        -2.9,
+        0.28,
+        0.43
+      ],
+      "radius": 0.124,
+      "spacing": 0.059,
+      "endRadius": 0.032
+    },
+    {
+      "id": "walking-leg--1-0-lower-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -2.58,
+        0.73,
+        0.09
+      ],
+      "material": "shell",
+      "size": [
+        0.27032,
+        0.27032,
+        0.27032
+      ],
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg--1-1-upper-0",
+      "kind": "beam",
+      "at": [
+        -0.9650000000000001,
+        1.6099999999999999,
+        -0.96
+      ],
+      "material": "shell",
+      "to": [
+        -2.07,
+        1.455,
+        -0.85
+      ],
+      "radius": 0.284,
+      "spacing": 0.063,
+      "endRadius": 0.19699999999999998
+    },
+    {
+      "id": "walking-leg--1-1-socket",
+      "kind": "rock",
+      "at": [
+        -2.07,
+        1.455,
+        -0.85
+      ],
+      "material": "joint",
+      "size": [
+        0.441,
+        0.44499999999999995,
+        0.40700000000000003
+      ],
+      "accent": "lacquer",
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg--1-1-lower-0",
+      "kind": "beam",
+      "at": [
+        -2.07,
+        1.455,
+        -0.85
+      ],
+      "material": "shell",
+      "to": [
+        -2.66,
+        0.6749999999999999,
+        -0.65
+      ],
+      "radius": 0.19599999999999998,
+      "spacing": 0.059,
+      "endRadius": 0.11599999999999999
+    },
+    {
+      "id": "walking-leg--1-1-lower-1",
+      "kind": "beam",
+      "at": [
+        -2.66,
+        0.6749999999999999,
+        -0.65
+      ],
+      "material": "shell",
+      "to": [
+        -2.935,
+        0.28,
+        -0.36000000000000004
+      ],
+      "radius": 0.11599999999999999,
+      "spacing": 0.059,
+      "endRadius": 0.032
+    },
+    {
+      "id": "walking-leg--1-1-lower-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -2.66,
+        0.6749999999999999,
+        -0.65
+      ],
+      "material": "shell",
+      "size": [
+        0.25288,
+        0.25288,
+        0.25288
+      ],
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg--1-2-upper-0",
+      "kind": "beam",
+      "at": [
+        -0.88,
+        1.5599999999999998,
+        -1.35
+      ],
+      "material": "shell",
+      "to": [
+        -2.11,
+        1.34,
+        -1.47
+      ],
+      "radius": 0.268,
+      "spacing": 0.063,
+      "endRadius": 0.184
+    },
+    {
+      "id": "walking-leg--1-2-socket",
+      "kind": "rock",
+      "at": [
+        -2.11,
+        1.34,
+        -1.47
+      ],
+      "material": "joint",
+      "size": [
+        0.382,
+        0.41,
+        0.364
+      ],
+      "accent": "lacquer",
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg--1-2-lower-0",
+      "kind": "beam",
+      "at": [
+        -2.11,
+        1.34,
+        -1.47
+      ],
+      "material": "shell",
+      "to": [
+        -2.74,
+        0.62,
+        -1.39
+      ],
+      "radius": 0.182,
+      "spacing": 0.059,
+      "endRadius": 0.108
+    },
+    {
+      "id": "walking-leg--1-2-lower-1",
+      "kind": "beam",
+      "at": [
+        -2.74,
+        0.62,
+        -1.39
+      ],
+      "material": "shell",
+      "to": [
+        -2.9699999999999998,
+        0.28,
+        -1.1500000000000001
+      ],
+      "radius": 0.108,
+      "spacing": 0.059,
+      "endRadius": 0.032
+    },
+    {
+      "id": "walking-leg--1-2-lower-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -2.74,
+        0.62,
+        -1.39
+      ],
+      "material": "shell",
+      "size": [
+        0.23544,
+        0.23544,
+        0.23544
+      ],
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg--1-3-upper-0",
+      "kind": "beam",
+      "at": [
+        -0.795,
+        1.5099999999999998,
+        -1.7399999999999998
+      ],
+      "material": "shell",
+      "to": [
+        -2.15,
+        1.225,
+        -2.09
+      ],
+      "radius": 0.252,
+      "spacing": 0.063,
+      "endRadius": 0.17099999999999999
+    },
+    {
+      "id": "walking-leg--1-3-socket",
+      "kind": "rock",
+      "at": [
+        -2.15,
+        1.225,
+        -2.09
+      ],
+      "material": "joint",
+      "size": [
+        0.323,
+        0.375,
+        0.321
+      ],
+      "accent": "lacquer",
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg--1-3-lower-0",
+      "kind": "beam",
+      "at": [
+        -2.15,
+        1.225,
+        -2.09
+      ],
+      "material": "shell",
+      "to": [
+        -2.8200000000000003,
+        0.565,
+        -2.13
+      ],
+      "radius": 0.16799999999999998,
+      "spacing": 0.059,
+      "endRadius": 0.1
+    },
+    {
+      "id": "walking-leg--1-3-lower-1",
+      "kind": "beam",
+      "at": [
+        -2.8200000000000003,
+        0.565,
+        -2.13
+      ],
+      "material": "shell",
+      "to": [
+        -3.005,
+        0.28,
+        -1.9400000000000002
+      ],
+      "radius": 0.1,
+      "spacing": 0.059,
+      "endRadius": 0.032
+    },
+    {
+      "id": "walking-leg--1-3-lower-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -2.8200000000000003,
+        0.565,
+        -2.13
+      ],
+      "material": "shell",
+      "size": [
+        0.21800000000000003,
+        0.21800000000000003,
+        0.21800000000000003
+      ],
+      "spacing": 0.059
+    },
+    {
+      "id": "eyestalk--1-0",
+      "kind": "beam",
+      "at": [
+        -0.5,
+        2.11,
+        -0.25
+      ],
+      "material": "joint",
+      "to": [
+        -0.58,
+        2.35,
+        -0.1
+      ],
+      "radius": 0.18,
+      "spacing": 0.049,
+      "endRadius": 0.12
+    },
+    {
+      "id": "eyestalk--1-1",
+      "kind": "beam",
+      "at": [
+        -0.58,
+        2.35,
+        -0.1
+      ],
+      "material": "joint",
+      "to": [
+        -0.65,
+        2.42,
+        -0.022
+      ],
+      "radius": 0.12,
+      "spacing": 0.049,
+      "endRadius": 0.09
+    },
+    {
+      "id": "eyestalk--1-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -0.58,
+        2.35,
+        -0.1
+      ],
+      "material": "joint",
+      "size": [
+        0.2616,
+        0.2616,
+        0.2616
+      ],
+      "spacing": 0.049
+    },
+    {
+      "id": "eye-socket--1",
+      "kind": "rock",
+      "at": [
+        -0.65,
+        2.42,
+        -0.022
+      ],
+      "material": "joint",
+      "size": [
+        0.35,
+        0.29,
+        0.25
+      ],
+      "accent": "shell",
+      "spacing": 0.049
+    },
+    {
+      "id": "eye--1",
+      "kind": "rock",
+      "at": [
+        -0.66,
+        2.438,
+        0.087
+      ],
+      "material": "shine",
+      "size": [
+        0.21,
+        0.145,
+        0.101
+      ],
+      "spacing": 0.049
+    },
+    {
+      "id": "brow--1",
+      "kind": "beam",
+      "at": [
+        -0.45,
+        2.48,
+        0.107
+      ],
+      "material": "lacquer",
+      "to": [
+        -0.81,
+        2.61,
+        0.075
+      ],
+      "radius": 0.066,
+      "endRadius": 0.09,
+      "spacing": 0.049
+    },
+    {
+      "id": "mouth-flank--1-0",
+      "kind": "beam",
+      "at": [
+        -0.55,
+        1.83,
+        0.02
+      ],
+      "material": "lacquer",
+      "to": [
+        -0.39,
+        1.63,
+        0.125
+      ],
+      "radius": 0.108,
+      "spacing": 0.054,
+      "endRadius": 0.105
+    },
+    {
+      "id": "mouth-flank--1-1",
+      "kind": "beam",
+      "at": [
+        -0.39,
+        1.63,
+        0.125
+      ],
+      "material": "lacquer",
+      "to": [
+        -0.18,
+        1.7,
+        0.16
+      ],
+      "radius": 0.105,
+      "spacing": 0.054,
+      "endRadius": 0.034
+    },
+    {
+      "id": "mouth-flank--1-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -0.39,
+        1.63,
+        0.125
+      ],
+      "material": "lacquer",
+      "size": [
+        0.22890000000000002,
+        0.22890000000000002,
+        0.22890000000000002
+      ],
+      "spacing": 0.054
+    },
+    {
+      "id": "claw--1-arm-0",
+      "kind": "beam",
+      "at": [
+        -1.13,
+        1.81,
+        -0.4
+      ],
+      "material": "shell",
+      "to": [
+        -1.9,
+        2.1,
+        0.35
+      ],
+      "radius": 0.35,
+      "spacing": 0.059,
+      "motion": "claw--1",
+      "endRadius": 0.36
+    },
+    {
+      "id": "claw--1-arm-1",
+      "kind": "beam",
+      "at": [
+        -1.9,
+        2.1,
+        0.35
+      ],
+      "material": "shell",
+      "to": [
+        -2.26,
+        2.45,
+        1.07
+      ],
+      "radius": 0.36,
+      "spacing": 0.059,
+      "motion": "claw--1",
+      "endRadius": 0.31
+    },
+    {
+      "id": "claw--1-arm-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -1.9,
+        2.1,
+        0.35
+      ],
+      "material": "shell",
+      "size": [
+        0.7848,
+        0.7848,
+        0.7848
+      ],
+      "spacing": 0.059,
+      "motion": "claw--1"
+    },
+    {
+      "id": "claw--1-arm-cuff",
+      "kind": "rock",
+      "at": [
+        -1.9,
+        2.1,
+        0.35
+      ],
+      "material": "joint",
+      "size": [
+        0.74,
+        0.68,
+        0.73
+      ],
+      "accent": "lacquer",
+      "spacing": 0.061,
+      "motion": "claw--1"
+    },
+    {
+      "id": "claw--1-palm",
+      "kind": "rock",
+      "at": [
+        -2.16,
+        2.54,
+        1.34
+      ],
+      "material": "shell",
+      "size": [
+        1.19,
+        1,
+        1.31
+      ],
+      "accent": "lacquer",
+      "yaw": 0.23,
+      "spacing": 0.052,
+      "motion": "claw--1"
+    },
+    {
+      "id": "claw--1-crown",
+      "kind": "rock",
+      "at": [
+        -2.28,
+        2.8000000000000003,
+        1.34
+      ],
+      "material": "lacquer",
+      "size": [
+        0.72,
+        0.6,
+        0.81
+      ],
+      "spacing": 0.053,
+      "motion": "claw--1"
+    },
+    {
+      "id": "claw--1-fixed-finger-0",
+      "kind": "beam",
+      "at": [
+        -2.28,
+        2.74,
+        1.45
+      ],
+      "material": "lacquer",
+      "to": [
+        -2.17,
+        3,
+        1.91
+      ],
+      "radius": 0.36,
+      "spacing": 0.049,
+      "motion": "claw--1",
+      "endRadius": 0.3
+    },
+    {
+      "id": "claw--1-fixed-finger-1",
+      "kind": "beam",
+      "at": [
+        -2.17,
+        3,
+        1.91
+      ],
+      "material": "lacquer",
+      "to": [
+        -1.85,
+        2.99,
+        2.3
+      ],
+      "radius": 0.3,
+      "spacing": 0.049,
+      "motion": "claw--1",
+      "endRadius": 0.219
+    },
+    {
+      "id": "claw--1-fixed-finger-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -2.17,
+        3,
+        1.91
+      ],
+      "material": "lacquer",
+      "size": [
+        0.654,
+        0.654,
+        0.654
+      ],
+      "spacing": 0.049,
+      "motion": "claw--1"
+    },
+    {
+      "id": "claw--1-fixed-finger-2",
+      "kind": "beam",
+      "at": [
+        -1.85,
+        2.99,
+        2.3
+      ],
+      "material": "lacquer",
+      "to": [
+        -1.52,
+        2.8400000000000003,
+        2.5
+      ],
+      "radius": 0.219,
+      "spacing": 0.049,
+      "motion": "claw--1",
+      "endRadius": 0.13
+    },
+    {
+      "id": "claw--1-fixed-finger-knuckle-2",
+      "kind": "rock",
+      "at": [
+        -1.85,
+        2.99,
+        2.3
+      ],
+      "material": "lacquer",
+      "size": [
+        0.47742,
+        0.47742,
+        0.47742
+      ],
+      "spacing": 0.049,
+      "motion": "claw--1"
+    },
+    {
+      "id": "claw--1-fixed-finger-3",
+      "kind": "beam",
+      "at": [
+        -1.52,
+        2.8400000000000003,
+        2.5
+      ],
+      "material": "lacquer",
+      "to": [
+        -1.31,
+        2.66,
+        2.51
+      ],
+      "radius": 0.13,
+      "spacing": 0.049,
+      "motion": "claw--1",
+      "endRadius": 0.029
+    },
+    {
+      "id": "claw--1-fixed-finger-knuckle-3",
+      "kind": "rock",
+      "at": [
+        -1.52,
+        2.8400000000000003,
+        2.5
+      ],
+      "material": "lacquer",
+      "size": [
+        0.28340000000000004,
+        0.28340000000000004,
+        0.28340000000000004
+      ],
+      "spacing": 0.049,
+      "motion": "claw--1"
+    },
+    {
+      "id": "jaw--1-moving-finger-0",
+      "kind": "beam",
+      "at": [
+        -2.19,
+        2.2800000000000002,
+        1.32
+      ],
+      "material": "shell",
+      "to": [
+        -2.04,
+        2.08,
+        1.82
+      ],
+      "radius": 0.3,
+      "spacing": 0.049,
+      "motion": "jaw--1",
+      "endRadius": 0.25
+    },
+    {
+      "id": "jaw--1-moving-finger-1",
+      "kind": "beam",
+      "at": [
+        -2.04,
+        2.08,
+        1.82
+      ],
+      "material": "shell",
+      "to": [
+        -1.74,
+        2.06,
+        2.28
+      ],
+      "radius": 0.25,
+      "spacing": 0.049,
+      "motion": "jaw--1",
+      "endRadius": 0.164
+    },
+    {
+      "id": "jaw--1-moving-finger-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -2.04,
+        2.08,
+        1.82
+      ],
+      "material": "shell",
+      "size": [
+        0.545,
+        0.545,
+        0.545
+      ],
+      "spacing": 0.049,
+      "motion": "jaw--1"
+    },
+    {
+      "id": "jaw--1-moving-finger-2",
+      "kind": "beam",
+      "at": [
+        -1.74,
+        2.06,
+        2.28
+      ],
+      "material": "shell",
+      "to": [
+        -1.47,
+        2.16,
+        2.53
+      ],
+      "radius": 0.164,
+      "spacing": 0.049,
+      "motion": "jaw--1",
+      "endRadius": 0.104
+    },
+    {
+      "id": "jaw--1-moving-finger-knuckle-2",
+      "kind": "rock",
+      "at": [
+        -1.74,
+        2.06,
+        2.28
+      ],
+      "material": "shell",
+      "size": [
+        0.35752000000000006,
+        0.35752000000000006,
+        0.35752000000000006
+      ],
+      "spacing": 0.049,
+      "motion": "jaw--1"
+    },
+    {
+      "id": "jaw--1-moving-finger-3",
+      "kind": "beam",
+      "at": [
+        -1.47,
+        2.16,
+        2.53
+      ],
+      "material": "shell",
+      "to": [
+        -1.26,
+        2.3400000000000003,
+        2.6
+      ],
+      "radius": 0.104,
+      "spacing": 0.049,
+      "motion": "jaw--1",
+      "endRadius": 0.029
+    },
+    {
+      "id": "jaw--1-moving-finger-knuckle-3",
+      "kind": "rock",
+      "at": [
+        -1.47,
+        2.16,
+        2.53
+      ],
+      "material": "shell",
+      "size": [
+        0.22672,
+        0.22672,
+        0.22672
+      ],
+      "spacing": 0.049,
+      "motion": "jaw--1"
+    },
+    {
+      "id": "claw--1-tooth-0-0",
+      "kind": "beam",
+      "at": [
+        -2.17,
+        2.85,
+        1.91
+      ],
+      "material": "gold",
+      "to": [
+        -2.1029999999999998,
+        2.69,
+        1.93
+      ],
+      "radius": 0.099,
+      "spacing": 0.049,
+      "motion": "claw--1",
+      "endRadius": 0.025
+    },
+    {
+      "id": "claw--1-tooth-1-0",
+      "kind": "beam",
+      "at": [
+        -1.85,
+        2.8400000000000003,
+        2.3
+      ],
+      "material": "gold",
+      "to": [
+        -1.7830000000000001,
+        2.706,
+        2.32
+      ],
+      "radius": 0.082,
+      "spacing": 0.049,
+      "motion": "claw--1",
+      "endRadius": 0.025
+    },
+    {
+      "id": "claw--1-tooth-2-0",
+      "kind": "beam",
+      "at": [
+        -1.52,
+        2.6900000000000004,
+        2.5
+      ],
+      "material": "gold",
+      "to": [
+        -1.453,
+        2.5820000000000003,
+        2.52
+      ],
+      "radius": 0.065,
+      "spacing": 0.049,
+      "motion": "claw--1",
+      "endRadius": 0.025
+    },
+    {
+      "id": "keel-1-0",
+      "kind": "rock",
+      "at": [
+        0.58,
+        2.48,
+        -1.61
+      ],
+      "material": "shell",
+      "size": [
+        0.42,
+        0.31,
+        0.51
+      ],
+      "accent": "lacquer",
+      "spacing": 0.053,
+      "yaw": 0.33
+    },
+    {
+      "id": "keel-1-1",
+      "kind": "rock",
+      "at": [
+        0.7549999999999999,
+        2.434,
+        -1.35
+      ],
+      "material": "shell",
+      "size": [
+        0.42,
+        0.31,
+        0.51
+      ],
+      "accent": "lacquer",
+      "spacing": 0.053,
+      "yaw": 0.33
+    },
+    {
+      "id": "keel-1-2",
+      "kind": "rock",
+      "at": [
+        0.9299999999999999,
+        2.388,
+        -1.09
+      ],
+      "material": "shell",
+      "size": [
+        0.42,
+        0.31,
+        0.51
+      ],
+      "accent": "lacquer",
+      "spacing": 0.053,
+      "yaw": 0.33
+    },
+    {
+      "id": "keel-1-3",
+      "kind": "rock",
+      "at": [
+        1.105,
+        2.342,
+        -0.8300000000000001
+      ],
+      "material": "shell",
+      "size": [
+        0.42,
+        0.31,
+        0.51
+      ],
+      "accent": "lacquer",
+      "spacing": 0.053,
+      "yaw": 0.33
+    },
+    {
+      "id": "keel-1-4",
+      "kind": "rock",
+      "at": [
+        1.2799999999999998,
+        2.296,
+        -0.5700000000000001
+      ],
+      "material": "shell",
+      "size": [
+        0.42,
+        0.31,
+        0.51
+      ],
+      "accent": "lacquer",
+      "spacing": 0.053,
+      "yaw": 0.33
+    },
+    {
+      "id": "shell-spike-1-0-0",
+      "kind": "beam",
+      "at": [
+        0.99,
+        2.33,
+        -1.63
+      ],
+      "material": "shell",
+      "to": [
+        1.15,
+        2.57,
+        -1.73
+      ],
+      "radius": 0.23,
+      "spacing": 0.056,
+      "endRadius": 0.14
+    },
+    {
+      "id": "shell-spike-1-0-1",
+      "kind": "beam",
+      "at": [
+        1.15,
+        2.57,
+        -1.73
+      ],
+      "material": "shell",
+      "to": [
+        1.27,
+        2.79,
+        -1.7999999999999998
+      ],
+      "radius": 0.14,
+      "spacing": 0.056,
+      "endRadius": 0.026
+    },
+    {
+      "id": "shell-spike-1-0-knuckle-1",
+      "kind": "rock",
+      "at": [
+        1.15,
+        2.57,
+        -1.73
+      ],
+      "material": "shell",
+      "size": [
+        0.3052,
+        0.3052,
+        0.3052
+      ],
+      "spacing": 0.056
+    },
+    {
+      "id": "shell-spike-1-1-0",
+      "kind": "beam",
+      "at": [
+        1.14,
+        2.33,
+        -1.2899999999999998
+      ],
+      "material": "shell",
+      "to": [
+        1.2999999999999998,
+        2.57,
+        -1.39
+      ],
+      "radius": 0.23,
+      "spacing": 0.056,
+      "endRadius": 0.14
+    },
+    {
+      "id": "shell-spike-1-1-1",
+      "kind": "beam",
+      "at": [
+        1.2999999999999998,
+        2.57,
+        -1.39
+      ],
+      "material": "shell",
+      "to": [
+        1.42,
+        2.71,
+        -1.4599999999999997
+      ],
+      "radius": 0.14,
+      "spacing": 0.056,
+      "endRadius": 0.026
+    },
+    {
+      "id": "shell-spike-1-1-knuckle-1",
+      "kind": "rock",
+      "at": [
+        1.2999999999999998,
+        2.57,
+        -1.39
+      ],
+      "material": "shell",
+      "size": [
+        0.3052,
+        0.3052,
+        0.3052
+      ],
+      "spacing": 0.056
+    },
+    {
+      "id": "shell-spike-1-2-0",
+      "kind": "beam",
+      "at": [
+        1.29,
+        2.33,
+        -0.9499999999999998
+      ],
+      "material": "shell",
+      "to": [
+        1.45,
+        2.57,
+        -1.0499999999999998
+      ],
+      "radius": 0.23,
+      "spacing": 0.056,
+      "endRadius": 0.14
+    },
+    {
+      "id": "shell-spike-1-2-1",
+      "kind": "beam",
+      "at": [
+        1.45,
+        2.57,
+        -1.0499999999999998
+      ],
+      "material": "shell",
+      "to": [
+        1.57,
+        2.63,
+        -1.1199999999999999
+      ],
+      "radius": 0.14,
+      "spacing": 0.056,
+      "endRadius": 0.026
+    },
+    {
+      "id": "shell-spike-1-2-knuckle-1",
+      "kind": "rock",
+      "at": [
+        1.45,
+        2.57,
+        -1.0499999999999998
+      ],
+      "material": "shell",
+      "size": [
+        0.3052,
+        0.3052,
+        0.3052
+      ],
+      "spacing": 0.056
+    },
+    {
+      "id": "shell-spike-1-3-0",
+      "kind": "beam",
+      "at": [
+        1.44,
+        2.33,
+        -0.6099999999999999
+      ],
+      "material": "shell",
+      "to": [
+        1.5999999999999999,
+        2.57,
+        -0.7099999999999999
+      ],
+      "radius": 0.23,
+      "spacing": 0.056,
+      "endRadius": 0.14
+    },
+    {
+      "id": "shell-spike-1-3-1",
+      "kind": "beam",
+      "at": [
+        1.5999999999999999,
+        2.57,
+        -0.7099999999999999
+      ],
+      "material": "shell",
+      "to": [
+        1.72,
+        2.55,
+        -0.7799999999999999
+      ],
+      "radius": 0.14,
+      "spacing": 0.056,
+      "endRadius": 0.026
+    },
+    {
+      "id": "shell-spike-1-3-knuckle-1",
+      "kind": "rock",
+      "at": [
+        1.5999999999999999,
+        2.57,
+        -0.7099999999999999
+      ],
+      "material": "shell",
+      "size": [
+        0.3052,
+        0.3052,
+        0.3052
+      ],
+      "spacing": 0.056
+    },
+    {
+      "id": "walking-leg-1-0-upper-0",
+      "kind": "beam",
+      "at": [
+        1.05,
+        1.66,
+        -0.57
+      ],
+      "material": "shell",
+      "to": [
+        2.03,
+        1.57,
+        -0.23
+      ],
+      "radius": 0.3,
+      "spacing": 0.063,
+      "endRadius": 0.21
+    },
+    {
+      "id": "walking-leg-1-0-socket",
+      "kind": "rock",
+      "at": [
+        2.03,
+        1.57,
+        -0.23
+      ],
+      "material": "joint",
+      "size": [
+        0.5,
+        0.48,
+        0.45
+      ],
+      "accent": "lacquer",
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg-1-0-lower-0",
+      "kind": "beam",
+      "at": [
+        2.03,
+        1.57,
+        -0.23
+      ],
+      "material": "shell",
+      "to": [
+        2.58,
+        0.73,
+        0.09
+      ],
+      "radius": 0.21,
+      "spacing": 0.059,
+      "endRadius": 0.124
+    },
+    {
+      "id": "walking-leg-1-0-lower-1",
+      "kind": "beam",
+      "at": [
+        2.58,
+        0.73,
+        0.09
+      ],
+      "material": "shell",
+      "to": [
+        2.9,
+        0.28,
+        0.43
+      ],
+      "radius": 0.124,
+      "spacing": 0.059,
+      "endRadius": 0.032
+    },
+    {
+      "id": "walking-leg-1-0-lower-knuckle-1",
+      "kind": "rock",
+      "at": [
+        2.58,
+        0.73,
+        0.09
+      ],
+      "material": "shell",
+      "size": [
+        0.27032,
+        0.27032,
+        0.27032
+      ],
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg-1-1-upper-0",
+      "kind": "beam",
+      "at": [
+        0.9650000000000001,
+        1.6099999999999999,
+        -0.96
+      ],
+      "material": "shell",
+      "to": [
+        2.07,
+        1.455,
+        -0.85
+      ],
+      "radius": 0.284,
+      "spacing": 0.063,
+      "endRadius": 0.19699999999999998
+    },
+    {
+      "id": "walking-leg-1-1-socket",
+      "kind": "rock",
+      "at": [
+        2.07,
+        1.455,
+        -0.85
+      ],
+      "material": "joint",
+      "size": [
+        0.441,
+        0.44499999999999995,
+        0.40700000000000003
+      ],
+      "accent": "lacquer",
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg-1-1-lower-0",
+      "kind": "beam",
+      "at": [
+        2.07,
+        1.455,
+        -0.85
+      ],
+      "material": "shell",
+      "to": [
+        2.66,
+        0.6749999999999999,
+        -0.65
+      ],
+      "radius": 0.19599999999999998,
+      "spacing": 0.059,
+      "endRadius": 0.11599999999999999
+    },
+    {
+      "id": "walking-leg-1-1-lower-1",
+      "kind": "beam",
+      "at": [
+        2.66,
+        0.6749999999999999,
+        -0.65
+      ],
+      "material": "shell",
+      "to": [
+        2.935,
+        0.28,
+        -0.36000000000000004
+      ],
+      "radius": 0.11599999999999999,
+      "spacing": 0.059,
+      "endRadius": 0.032
+    },
+    {
+      "id": "walking-leg-1-1-lower-knuckle-1",
+      "kind": "rock",
+      "at": [
+        2.66,
+        0.6749999999999999,
+        -0.65
+      ],
+      "material": "shell",
+      "size": [
+        0.25288,
+        0.25288,
+        0.25288
+      ],
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg-1-2-upper-0",
+      "kind": "beam",
+      "at": [
+        0.88,
+        1.5599999999999998,
+        -1.35
+      ],
+      "material": "shell",
+      "to": [
+        2.11,
+        1.34,
+        -1.47
+      ],
+      "radius": 0.268,
+      "spacing": 0.063,
+      "endRadius": 0.184
+    },
+    {
+      "id": "walking-leg-1-2-socket",
+      "kind": "rock",
+      "at": [
+        2.11,
+        1.34,
+        -1.47
+      ],
+      "material": "joint",
+      "size": [
+        0.382,
+        0.41,
+        0.364
+      ],
+      "accent": "lacquer",
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg-1-2-lower-0",
+      "kind": "beam",
+      "at": [
+        2.11,
+        1.34,
+        -1.47
+      ],
+      "material": "shell",
+      "to": [
+        2.74,
+        0.62,
+        -1.39
+      ],
+      "radius": 0.182,
+      "spacing": 0.059,
+      "endRadius": 0.108
+    },
+    {
+      "id": "walking-leg-1-2-lower-1",
+      "kind": "beam",
+      "at": [
+        2.74,
+        0.62,
+        -1.39
+      ],
+      "material": "shell",
+      "to": [
+        2.9699999999999998,
+        0.28,
+        -1.1500000000000001
+      ],
+      "radius": 0.108,
+      "spacing": 0.059,
+      "endRadius": 0.032
+    },
+    {
+      "id": "walking-leg-1-2-lower-knuckle-1",
+      "kind": "rock",
+      "at": [
+        2.74,
+        0.62,
+        -1.39
+      ],
+      "material": "shell",
+      "size": [
+        0.23544,
+        0.23544,
+        0.23544
+      ],
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg-1-3-upper-0",
+      "kind": "beam",
+      "at": [
+        0.795,
+        1.5099999999999998,
+        -1.7399999999999998
+      ],
+      "material": "shell",
+      "to": [
+        2.15,
+        1.225,
+        -2.09
+      ],
+      "radius": 0.252,
+      "spacing": 0.063,
+      "endRadius": 0.17099999999999999
+    },
+    {
+      "id": "walking-leg-1-3-socket",
+      "kind": "rock",
+      "at": [
+        2.15,
+        1.225,
+        -2.09
+      ],
+      "material": "joint",
+      "size": [
+        0.323,
+        0.375,
+        0.321
+      ],
+      "accent": "lacquer",
+      "spacing": 0.059
+    },
+    {
+      "id": "walking-leg-1-3-lower-0",
+      "kind": "beam",
+      "at": [
+        2.15,
+        1.225,
+        -2.09
+      ],
+      "material": "shell",
+      "to": [
+        2.8200000000000003,
+        0.565,
+        -2.13
+      ],
+      "radius": 0.16799999999999998,
+      "spacing": 0.059,
+      "endRadius": 0.1
+    },
+    {
+      "id": "walking-leg-1-3-lower-1",
+      "kind": "beam",
+      "at": [
+        2.8200000000000003,
+        0.565,
+        -2.13
+      ],
+      "material": "shell",
+      "to": [
+        3.005,
+        0.28,
+        -1.9400000000000002
+      ],
+      "radius": 0.1,
+      "spacing": 0.059,
+      "endRadius": 0.032
+    },
+    {
+      "id": "walking-leg-1-3-lower-knuckle-1",
+      "kind": "rock",
+      "at": [
+        2.8200000000000003,
+        0.565,
+        -2.13
+      ],
+      "material": "shell",
+      "size": [
+        0.21800000000000003,
+        0.21800000000000003,
+        0.21800000000000003
+      ],
+      "spacing": 0.059
+    },
+    {
+      "id": "eyestalk-1-0",
+      "kind": "beam",
+      "at": [
+        0.5,
+        2.11,
+        -0.25
+      ],
+      "material": "joint",
+      "to": [
+        0.58,
+        2.35,
+        -0.1
+      ],
+      "radius": 0.18,
+      "spacing": 0.049,
+      "endRadius": 0.12
+    },
+    {
+      "id": "eyestalk-1-1",
+      "kind": "beam",
+      "at": [
+        0.58,
+        2.35,
+        -0.1
+      ],
+      "material": "joint",
+      "to": [
+        0.65,
+        2.42,
+        -0.022
+      ],
+      "radius": 0.12,
+      "spacing": 0.049,
+      "endRadius": 0.09
+    },
+    {
+      "id": "eyestalk-1-knuckle-1",
+      "kind": "rock",
+      "at": [
+        0.58,
+        2.35,
+        -0.1
+      ],
+      "material": "joint",
+      "size": [
+        0.2616,
+        0.2616,
+        0.2616
+      ],
+      "spacing": 0.049
+    },
+    {
+      "id": "eye-socket-1",
+      "kind": "rock",
+      "at": [
+        0.65,
+        2.42,
+        -0.022
+      ],
+      "material": "joint",
+      "size": [
+        0.35,
+        0.29,
+        0.25
+      ],
+      "accent": "shell",
+      "spacing": 0.049
+    },
+    {
+      "id": "eye-1",
+      "kind": "rock",
+      "at": [
+        0.66,
+        2.438,
+        0.087
+      ],
+      "material": "shine",
+      "size": [
+        0.21,
+        0.145,
+        0.101
+      ],
+      "spacing": 0.049
+    },
+    {
+      "id": "brow-1",
+      "kind": "beam",
+      "at": [
+        0.45,
+        2.48,
+        0.107
+      ],
+      "material": "lacquer",
+      "to": [
+        0.81,
+        2.61,
+        0.075
+      ],
+      "radius": 0.066,
+      "endRadius": 0.09,
+      "spacing": 0.049
+    },
+    {
+      "id": "mouth-flank-1-0",
+      "kind": "beam",
+      "at": [
+        0.55,
+        1.83,
+        0.02
+      ],
+      "material": "lacquer",
+      "to": [
+        0.39,
+        1.63,
+        0.125
+      ],
+      "radius": 0.108,
+      "spacing": 0.054,
+      "endRadius": 0.105
+    },
+    {
+      "id": "mouth-flank-1-1",
+      "kind": "beam",
+      "at": [
+        0.39,
+        1.63,
+        0.125
+      ],
+      "material": "lacquer",
+      "to": [
+        0.18,
+        1.7,
+        0.16
+      ],
+      "radius": 0.105,
+      "spacing": 0.054,
+      "endRadius": 0.034
+    },
+    {
+      "id": "mouth-flank-1-knuckle-1",
+      "kind": "rock",
+      "at": [
+        0.39,
+        1.63,
+        0.125
+      ],
+      "material": "lacquer",
+      "size": [
+        0.22890000000000002,
+        0.22890000000000002,
+        0.22890000000000002
+      ],
+      "spacing": 0.054
+    },
+    {
+      "id": "claw-1-arm-0",
+      "kind": "beam",
+      "at": [
+        1.13,
+        1.81,
+        -0.4
+      ],
+      "material": "shell",
+      "to": [
+        1.9,
+        1.58,
+        0.35
+      ],
+      "radius": 0.35,
+      "spacing": 0.059,
+      "motion": "claw-1",
+      "endRadius": 0.36
+    },
+    {
+      "id": "claw-1-arm-1",
+      "kind": "beam",
+      "at": [
+        1.9,
+        1.58,
+        0.35
+      ],
+      "material": "shell",
+      "to": [
+        2.26,
+        1.36,
+        1.07
+      ],
+      "radius": 0.36,
+      "spacing": 0.059,
+      "motion": "claw-1",
+      "endRadius": 0.31
+    },
+    {
+      "id": "claw-1-arm-knuckle-1",
+      "kind": "rock",
+      "at": [
+        1.9,
+        1.58,
+        0.35
+      ],
+      "material": "shell",
+      "size": [
+        0.7848,
+        0.7848,
+        0.7848
+      ],
+      "spacing": 0.059,
+      "motion": "claw-1"
+    },
+    {
+      "id": "claw-1-arm-cuff",
+      "kind": "rock",
+      "at": [
+        1.9,
+        1.58,
+        0.35
+      ],
+      "material": "joint",
+      "size": [
+        0.74,
+        0.68,
+        0.73
+      ],
+      "accent": "lacquer",
+      "spacing": 0.061,
+      "motion": "claw-1"
+    },
+    {
+      "id": "claw-1-palm",
+      "kind": "rock",
+      "at": [
+        2.16,
+        1.4500000000000002,
+        1.34
+      ],
+      "material": "shell",
+      "size": [
+        1.01,
+        0.83,
+        1.08
+      ],
+      "accent": "lacquer",
+      "yaw": -0.23,
+      "spacing": 0.052,
+      "motion": "claw-1"
+    },
+    {
+      "id": "claw-1-crown",
+      "kind": "rock",
+      "at": [
+        2.28,
+        1.71,
+        1.34
+      ],
+      "material": "lacquer",
+      "size": [
+        0.72,
+        0.6,
+        0.81
+      ],
+      "spacing": 0.053,
+      "motion": "claw-1"
+    },
+    {
+      "id": "claw-1-fixed-finger-0",
+      "kind": "beam",
+      "at": [
+        2.28,
+        1.6500000000000001,
+        1.45
+      ],
+      "material": "lacquer",
+      "to": [
+        2.17,
+        1.9100000000000001,
+        1.91
+      ],
+      "radius": 0.36,
+      "spacing": 0.049,
+      "motion": "claw-1",
+      "endRadius": 0.3
+    },
+    {
+      "id": "claw-1-fixed-finger-1",
+      "kind": "beam",
+      "at": [
+        2.17,
+        1.9100000000000001,
+        1.91
+      ],
+      "material": "lacquer",
+      "to": [
+        1.85,
+        1.9000000000000001,
+        2.3
+      ],
+      "radius": 0.3,
+      "spacing": 0.049,
+      "motion": "claw-1",
+      "endRadius": 0.219
+    },
+    {
+      "id": "claw-1-fixed-finger-knuckle-1",
+      "kind": "rock",
+      "at": [
+        2.17,
+        1.9100000000000001,
+        1.91
+      ],
+      "material": "lacquer",
+      "size": [
+        0.654,
+        0.654,
+        0.654
+      ],
+      "spacing": 0.049,
+      "motion": "claw-1"
+    },
+    {
+      "id": "claw-1-fixed-finger-2",
+      "kind": "beam",
+      "at": [
+        1.85,
+        1.9000000000000001,
+        2.3
+      ],
+      "material": "lacquer",
+      "to": [
+        1.52,
+        1.75,
+        2.5
+      ],
+      "radius": 0.219,
+      "spacing": 0.049,
+      "motion": "claw-1",
+      "endRadius": 0.13
+    },
+    {
+      "id": "claw-1-fixed-finger-knuckle-2",
+      "kind": "rock",
+      "at": [
+        1.85,
+        1.9000000000000001,
+        2.3
+      ],
+      "material": "lacquer",
+      "size": [
+        0.47742,
+        0.47742,
+        0.47742
+      ],
+      "spacing": 0.049,
+      "motion": "claw-1"
+    },
+    {
+      "id": "claw-1-fixed-finger-3",
+      "kind": "beam",
+      "at": [
+        1.52,
+        1.75,
+        2.5
+      ],
+      "material": "lacquer",
+      "to": [
+        1.31,
+        1.57,
+        2.51
+      ],
+      "radius": 0.13,
+      "spacing": 0.049,
+      "motion": "claw-1",
+      "endRadius": 0.029
+    },
+    {
+      "id": "claw-1-fixed-finger-knuckle-3",
+      "kind": "rock",
+      "at": [
+        1.52,
+        1.75,
+        2.5
+      ],
+      "material": "lacquer",
+      "size": [
+        0.28340000000000004,
+        0.28340000000000004,
+        0.28340000000000004
+      ],
+      "spacing": 0.049,
+      "motion": "claw-1"
+    },
+    {
+      "id": "jaw-1-moving-finger-0",
+      "kind": "beam",
+      "at": [
+        2.19,
+        1.1900000000000002,
+        1.32
+      ],
+      "material": "shell",
+      "to": [
+        2.04,
+        0.9900000000000001,
+        1.82
+      ],
+      "radius": 0.3,
+      "spacing": 0.049,
+      "motion": "jaw-1",
+      "endRadius": 0.25
+    },
+    {
+      "id": "jaw-1-moving-finger-1",
+      "kind": "beam",
+      "at": [
+        2.04,
+        0.9900000000000001,
+        1.82
+      ],
+      "material": "shell",
+      "to": [
+        1.74,
+        0.9700000000000001,
+        2.28
+      ],
+      "radius": 0.25,
+      "spacing": 0.049,
+      "motion": "jaw-1",
+      "endRadius": 0.164
+    },
+    {
+      "id": "jaw-1-moving-finger-knuckle-1",
+      "kind": "rock",
+      "at": [
+        2.04,
+        0.9900000000000001,
+        1.82
+      ],
+      "material": "shell",
+      "size": [
+        0.545,
+        0.545,
+        0.545
+      ],
+      "spacing": 0.049,
+      "motion": "jaw-1"
+    },
+    {
+      "id": "jaw-1-moving-finger-2",
+      "kind": "beam",
+      "at": [
+        1.74,
+        0.9700000000000001,
+        2.28
+      ],
+      "material": "shell",
+      "to": [
+        1.47,
+        1.07,
+        2.53
+      ],
+      "radius": 0.164,
+      "spacing": 0.049,
+      "motion": "jaw-1",
+      "endRadius": 0.104
+    },
+    {
+      "id": "jaw-1-moving-finger-knuckle-2",
+      "kind": "rock",
+      "at": [
+        1.74,
+        0.9700000000000001,
+        2.28
+      ],
+      "material": "shell",
+      "size": [
+        0.35752000000000006,
+        0.35752000000000006,
+        0.35752000000000006
+      ],
+      "spacing": 0.049,
+      "motion": "jaw-1"
+    },
+    {
+      "id": "jaw-1-moving-finger-3",
+      "kind": "beam",
+      "at": [
+        1.47,
+        1.07,
+        2.53
+      ],
+      "material": "shell",
+      "to": [
+        1.26,
+        1.25,
+        2.6
+      ],
+      "radius": 0.104,
+      "spacing": 0.049,
+      "motion": "jaw-1",
+      "endRadius": 0.029
+    },
+    {
+      "id": "jaw-1-moving-finger-knuckle-3",
+      "kind": "rock",
+      "at": [
+        1.47,
+        1.07,
+        2.53
+      ],
+      "material": "shell",
+      "size": [
+        0.22672,
+        0.22672,
+        0.22672
+      ],
+      "spacing": 0.049,
+      "motion": "jaw-1"
+    },
+    {
+      "id": "claw-1-tooth-0-0",
+      "kind": "beam",
+      "at": [
+        2.17,
+        1.7600000000000002,
+        1.91
+      ],
+      "material": "gold",
+      "to": [
+        2.1029999999999998,
+        1.6,
+        1.93
+      ],
+      "radius": 0.099,
+      "spacing": 0.049,
+      "motion": "claw-1",
+      "endRadius": 0.025
+    },
+    {
+      "id": "claw-1-tooth-1-0",
+      "kind": "beam",
+      "at": [
+        1.85,
+        1.7500000000000002,
+        2.3
+      ],
+      "material": "gold",
+      "to": [
+        1.7830000000000001,
+        1.616,
+        2.32
+      ],
+      "radius": 0.082,
+      "spacing": 0.049,
+      "motion": "claw-1",
+      "endRadius": 0.025
+    },
+    {
+      "id": "claw-1-tooth-2-0",
+      "kind": "beam",
+      "at": [
+        1.52,
+        1.6,
+        2.5
+      ],
+      "material": "gold",
+      "to": [
+        1.453,
+        1.492,
+        2.52
+      ],
+      "radius": 0.065,
+      "spacing": 0.049,
+      "motion": "claw-1",
+      "endRadius": 0.025
+    },
+    {
+      "id": "mandible-center",
+      "kind": "rock",
+      "at": [
+        0,
+        1.72,
+        0.16
+      ],
+      "material": "joint",
+      "size": [
+        0.39,
+        0.24,
+        0.23
+      ],
+      "spacing": 0.051
+    },
+    {
+      "id": "shell-scar-0",
+      "kind": "beam",
+      "at": [
+        -0.31,
+        2.69,
+        -0.63
+      ],
+      "material": "gold",
+      "to": [
+        0.22,
+        2.72,
+        -0.89
+      ],
+      "radius": 0.038,
+      "spacing": 0.049,
+      "endRadius": 0.022
+    },
+    {
+      "id": "shell-scar-1",
+      "kind": "beam",
+      "at": [
+        -0.26,
+        2.725,
+        -0.94
+      ],
+      "material": "gold",
+      "to": [
+        0.27,
+        2.7600000000000002,
+        -1.2
+      ],
+      "radius": 0.038,
+      "spacing": 0.049,
+      "endRadius": 0.022
+    },
+    {
+      "id": "shell-scar-2",
+      "kind": "beam",
+      "at": [
+        -0.21,
+        2.76,
+        -1.25
+      ],
+      "material": "gold",
+      "to": [
+        0.32,
+        2.8000000000000003,
+        -1.51
+      ],
+      "radius": 0.038,
+      "spacing": 0.049,
+      "endRadius": 0.022
+    },
+    {
+      "id": "hero-left-boot",
+      "kind": "rock",
+      "at": [
+        -0.512456968369827,
+        0.372,
+        2.1280633013415646
+      ],
+      "material": "joint",
+      "size": [
+        0.2,
+        0.164,
+        0.33
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049,
+      "shadow": 0.62
+    },
+    {
+      "id": "hero-right-boot",
+      "kind": "rock",
+      "at": [
+        -0.2758478138329454,
+        0.36,
+        2.493359219727388
+      ],
+      "material": "joint",
+      "size": [
+        0.21,
+        0.16,
+        0.29
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-left-shin",
+      "kind": "beam",
+      "at": [
+        -0.5100589061553967,
+        0.43,
+        2.108182423654306
+      ],
+      "material": "steel",
+      "to": [
+        -0.49557810154256493,
+        0.73,
+        2.2070576293317914
+      ],
+      "radius": 0.083,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-right-shin",
+      "kind": "beam",
+      "at": [
+        -0.2775396373236153,
+        0.43,
+        2.5032150673964835
+      ],
+      "material": "steel",
+      "to": [
+        -0.29441850415087745,
+        0.73,
+        2.4242207394062567
+      ],
+      "radius": 0.081,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-belt",
+      "kind": "box",
+      "at": [
+        -0.400845911745335,
+        0.775,
+        2.334927923834548
+      ],
+      "material": "wood",
+      "size": [
+        0.36,
+        0.11,
+        0.235
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-belt-buckle",
+      "kind": "box",
+      "at": [
+        -0.3785138416684915,
+        0.78,
+        2.204830734602486
+      ],
+      "material": "gold",
+      "size": [
+        0.105,
+        0.072,
+        0.044
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-cuirass",
+      "kind": "rock",
+      "at": [
+        -0.3957704412733251,
+        0.95,
+        2.305360380827261
+      ],
+      "material": "steel",
+      "size": [
+        0.51,
+        0.39,
+        0.32
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049,
+      "accent": "steel"
+    },
+    {
+      "id": "hero-gorget",
+      "kind": "box",
+      "at": [
+        -0.3928943413391862,
+        1.12,
+        2.2886054397897984
+      ],
+      "material": "gold",
+      "size": [
+        0.235,
+        0.08,
+        0.22
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-helmet",
+      "kind": "box",
+      "at": [
+        -0.3898490590559803,
+        1.255,
+        2.2708649139854264
+      ],
+      "material": "steel",
+      "size": [
+        0.315,
+        0.25,
+        0.3
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-visor",
+      "kind": "box",
+      "at": [
+        -0.3629490655543279,
+        1.245,
+        2.114156936046806
+      ],
+      "material": "joint",
+      "size": [
+        0.242,
+        0.075,
+        0.05
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-faceguard",
+      "kind": "box",
+      "at": [
+        -0.36041133031832295,
+        1.196,
+        2.099373164543163
+      ],
+      "material": "steel",
+      "size": [
+        0.071,
+        0.103,
+        0.048
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-crest",
+      "kind": "rock",
+      "at": [
+        -0.40304528228320596,
+        1.409,
+        2.347740525804372
+      ],
+      "material": "lacquer",
+      "size": [
+        0.135,
+        0.16,
+        0.31
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-pauldron-left",
+      "kind": "rock",
+      "at": [
+        -0.6427843437419984,
+        1.035,
+        2.2548417507271017
+      ],
+      "material": "steel",
+      "size": [
+        0.215,
+        0.18,
+        0.204
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-pauldron-right",
+      "kind": "rock",
+      "at": [
+        -0.14500501779768543,
+        1.018,
+        2.3281134551048854
+      ],
+      "material": "gold",
+      "size": [
+        0.215,
+        0.17,
+        0.22
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-left-arm",
+      "kind": "beam",
+      "at": [
+        -0.6477929219431361,
+        0.99,
+        2.236733350897103
+      ],
+      "material": "steel",
+      "to": [
+        -0.7451710255343955,
+        0.9099999999999999,
+        1.9765074779694294
+      ],
+      "radius": 0.084,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-right-arm",
+      "kind": "beam",
+      "at": [
+        -0.1352888431501644,
+        0.99,
+        2.3247081724119414
+      ],
+      "material": "steel",
+      "to": [
+        0.01850962218305203,
+        0.97,
+        2.1380372532489726
+      ],
+      "radius": 0.081,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-gauntlet",
+      "kind": "rock",
+      "at": [
+        0.020201445673721986,
+        0.97,
+        2.1281814055798773
+      ],
+      "material": "steel",
+      "size": [
+        0.15,
+        0.15,
+        0.17
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-shield-rim",
+      "kind": "rock",
+      "at": [
+        -0.7516432262221512,
+        0.8999999999999999,
+        1.955103959140568
+      ],
+      "material": "gold",
+      "size": [
+        0.424,
+        0.5,
+        0.17
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-shield",
+      "kind": "rock",
+      "at": [
+        -0.7602774145043979,
+        0.8999999999999999,
+        1.9049197903947699
+      ],
+      "material": "cloth",
+      "size": [
+        0.326,
+        0.405,
+        0.138
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-shield-boss",
+      "kind": "rock",
+      "at": [
+        -0.7685437287610182,
+        0.8999999999999999,
+        1.8466817611646287
+      ],
+      "material": "gold",
+      "size": [
+        0.133,
+        0.136,
+        0.075
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-cape-0",
+      "kind": "box",
+      "at": [
+        -0.6112043449137403,
+        0.81,
+        2.455070878663092
+      ],
+      "material": "cloth",
+      "size": [
+        0.125,
+        0.57,
+        0.064
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049,
+      "tilt": -0.4
+    },
+    {
+      "id": "hero-cape-1",
+      "kind": "box",
+      "at": [
+        -0.5206190743405379,
+        0.77932625579895,
+        2.4888837276288287
+      ],
+      "material": "cloth",
+      "size": [
+        0.125,
+        0.6373176787846316,
+        0.064
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049,
+      "tilt": -0.376
+    },
+    {
+      "id": "hero-cape-2",
+      "kind": "box",
+      "at": [
+        -0.4300338037673356,
+        0.7651127256028176,
+        2.5226965765945657
+      ],
+      "material": "cloth",
+      "size": [
+        0.125,
+        0.6427437941460545,
+        0.064
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049,
+      "tilt": -0.35200000000000004
+    },
+    {
+      "id": "hero-cape-3",
+      "kind": "box",
+      "at": [
+        -0.3394485331941332,
+        0.7749867061400435,
+        2.5565094255603023
+      ],
+      "material": "cloth",
+      "size": [
+        0.125,
+        0.5812896006447893,
+        0.064
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049,
+      "tilt": -0.328
+    },
+    {
+      "id": "hero-cape-4",
+      "kind": "box",
+      "at": [
+        -0.24886326262093086,
+        0.803649599637306,
+        2.590322274526039
+      ],
+      "material": "cloth",
+      "size": [
+        0.125,
+        0.5094558003753656,
+        0.064
+      ],
+      "yaw": -0.17,
+      "spacing": 0.049,
+      "tilt": -0.30400000000000005
+    },
+    {
+      "id": "hero-sword-grip",
+      "kind": "beam",
+      "at": [
+        -0.030366344329477272,
+        0.8939999999999999,
+        2.215890576218941
+      ],
+      "material": "joint",
+      "to": [
+        0.07890375052785445,
+        1.026,
+        2.0581025970511035
+      ],
+      "radius": 0.057,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-sword-crossguard",
+      "kind": "beam",
+      "at": [
+        -0.04335203199214091,
+        1.082,
+        1.9782682457953715
+      ],
+      "material": "gold",
+      "to": [
+        0.21565019641262667,
+        1.032,
+        2.0653420402536624
+      ],
+      "radius": 0.043,
+      "spacing": 0.049
+    },
+    {
+      "id": "hero-sword-blade",
+      "kind": "beam",
+      "at": [
+        0.08879698114032997,
+        1.07,
+        2.0182011686550125
+      ],
+      "material": "steel",
+      "to": [
+        0.33101681124454296,
+        1.4300000000000002,
+        1.4641943510938151
+      ],
+      "radius": 0.075,
+      "spacing": 0.049,
+      "endRadius": 0.04
+    },
+    {
+      "id": "hero-sword-point",
+      "kind": "beam",
+      "at": [
+        0.33101681124454296,
+        1.4300000000000002,
+        1.4641943510938151
+      ],
+      "material": "shine",
+      "to": [
+        0.39910479966394996,
+        1.5330000000000001,
+        1.357170868469679
+      ],
+      "radius": 0.04,
+      "spacing": 0.049,
+      "endRadius": 0.012
+    },
+    {
+      "id": "hero-sword-edge",
+      "kind": "beam",
+      "at": [
+        0.12537378121006595,
+        1.083,
+        2.0356407127046308
+      ],
+      "material": "shine",
+      "to": [
+        0.3813780359552953,
+        1.475,
+        1.4190640171084221
+      ],
+      "radius": 0.022,
+      "spacing": 0.049,
+      "endRadius": 0.015
+    },
+    {
+      "id": "basalt-spire-0",
+      "kind": "cone",
+      "at": [
+        -3.52,
+        -0.045,
+        -1.15
+      ],
+      "material": "stone",
+      "radius": 0.34,
+      "topRadius": 0.2584,
+      "height": 1.5,
+      "anchor": "ground",
+      "tilt": -0.04,
+      "spacing": 0.074,
+      "shadow": 0.68,
+      "keepOut": 0.34
+    },
+    {
+      "id": "basalt-cap-0",
+      "kind": "rock",
+      "at": [
+        -3.52,
+        1.42,
+        -1.23
+      ],
+      "material": "stone",
+      "size": [
+        0.663,
+        0.21420000000000003,
+        0.5508000000000001
+      ],
+      "anchor": "ground",
+      "spacing": 0.071
+    },
+    {
+      "id": "basalt-foot-0",
+      "kind": "rock",
+      "at": [
+        -3.4,
+        0.17,
+        -0.9899999999999999
+      ],
+      "material": "stone",
+      "size": [
+        0.9044000000000001,
+        0.59,
+        0.7140000000000001
+      ],
+      "anchor": "ground",
+      "spacing": 0.073
+    },
+    {
+      "id": "basalt-spire-1",
+      "kind": "cone",
+      "at": [
+        -3.55,
+        -0.045,
+        -1.66
+      ],
+      "material": "stone",
+      "radius": 0.43,
+      "topRadius": 0.3268,
+      "height": 1.91,
+      "anchor": "ground",
+      "tilt": 0.1,
+      "spacing": 0.074,
+      "shadow": 0.86,
+      "keepOut": 0.43
+    },
+    {
+      "id": "basalt-cap-1",
+      "kind": "rock",
+      "at": [
+        -3.55,
+        1.8299999999999998,
+        -1.74
+      ],
+      "material": "stone",
+      "size": [
+        0.8385,
+        0.2709,
+        0.6966
+      ],
+      "anchor": "ground",
+      "spacing": 0.071
+    },
+    {
+      "id": "basalt-foot-1",
+      "kind": "rock",
+      "at": [
+        -3.4299999999999997,
+        0.17,
+        -1.5
+      ],
+      "material": "stone",
+      "size": [
+        1.1438000000000001,
+        0.59,
+        0.903
+      ],
+      "anchor": "ground",
+      "spacing": 0.073
+    },
+    {
+      "id": "basalt-spire-2",
+      "kind": "cone",
+      "at": [
+        -3.21,
+        -0.045,
+        -2.18
+      ],
+      "material": "stone",
+      "radius": 0.46,
+      "topRadius": 0.3496,
+      "height": 2.54,
+      "anchor": "ground",
+      "tilt": -0.04,
+      "spacing": 0.074,
+      "shadow": 0.92,
+      "keepOut": 0.46
+    },
+    {
+      "id": "basalt-cap-2",
+      "kind": "rock",
+      "at": [
+        -3.21,
+        2.46,
+        -2.2600000000000002
+      ],
+      "material": "stone",
+      "size": [
+        0.897,
+        0.2898,
+        0.7452000000000001
+      ],
+      "anchor": "ground",
+      "spacing": 0.071
+    },
+    {
+      "id": "basalt-foot-2",
+      "kind": "rock",
+      "at": [
+        -3.09,
+        0.17,
+        -2.02
+      ],
+      "material": "stone",
+      "size": [
+        1.2236,
+        0.59,
+        0.9660000000000001
+      ],
+      "anchor": "ground",
+      "spacing": 0.073
+    },
+    {
+      "id": "basalt-spire-3",
+      "kind": "cone",
+      "at": [
+        -2.86,
+        -0.045,
+        -2.58
+      ],
+      "material": "stone",
+      "radius": 0.39,
+      "topRadius": 0.2964,
+      "height": 2.18,
+      "anchor": "ground",
+      "tilt": 0.1,
+      "spacing": 0.074,
+      "shadow": 0.78,
+      "keepOut": 0.39
+    },
+    {
+      "id": "basalt-cap-3",
+      "kind": "rock",
+      "at": [
+        -2.86,
+        2.1,
+        -2.66
+      ],
+      "material": "stone",
+      "size": [
+        0.7605,
+        0.2457,
+        0.6318
+      ],
+      "anchor": "ground",
+      "spacing": 0.071
+    },
+    {
+      "id": "basalt-foot-3",
+      "kind": "rock",
+      "at": [
+        -2.7399999999999998,
+        0.17,
+        -2.42
+      ],
+      "material": "stone",
+      "size": [
+        1.0374,
+        0.59,
+        0.8190000000000001
+      ],
+      "anchor": "ground",
+      "spacing": 0.073
+    },
+    {
+      "id": "basalt-spire-4",
+      "kind": "cone",
+      "at": [
+        -2.45,
+        -0.045,
+        -2.68
+      ],
+      "material": "stone",
+      "radius": 0.31,
+      "topRadius": 0.2356,
+      "height": 1.42,
+      "anchor": "ground",
+      "tilt": -0.04,
+      "spacing": 0.074,
+      "shadow": 0.62,
+      "keepOut": 0.31
+    },
+    {
+      "id": "basalt-cap-4",
+      "kind": "rock",
+      "at": [
+        -2.45,
+        1.3399999999999999,
+        -2.7600000000000002
+      ],
+      "material": "stone",
+      "size": [
+        0.6045,
+        0.1953,
+        0.5022
+      ],
+      "anchor": "ground",
+      "spacing": 0.071
+    },
+    {
+      "id": "basalt-foot-4",
+      "kind": "rock",
+      "at": [
+        -2.33,
+        0.17,
+        -2.52
+      ],
+      "material": "stone",
+      "size": [
+        0.8246,
+        0.59,
+        0.651
+      ],
+      "anchor": "ground",
+      "spacing": 0.073
+    },
+    {
+      "id": "basalt-spire-5",
+      "kind": "cone",
+      "at": [
+        -3.98,
+        -0.045,
+        -0.71
+      ],
+      "material": "stone",
+      "radius": 0.28,
+      "topRadius": 0.21280000000000002,
+      "height": 0.88,
+      "anchor": "ground",
+      "tilt": 0.1,
+      "spacing": 0.074,
+      "shadow": 0.56,
+      "keepOut": 0.28
+    },
+    {
+      "id": "basalt-cap-5",
+      "kind": "rock",
+      "at": [
+        -3.98,
+        0.8,
+        -0.7899999999999999
+      ],
+      "material": "stone",
+      "size": [
+        0.546,
+        0.17640000000000003,
+        0.45360000000000006
+      ],
+      "anchor": "ground",
+      "spacing": 0.071
+    },
+    {
+      "id": "basalt-foot-5",
+      "kind": "rock",
+      "at": [
+        -3.86,
+        0.17,
+        -0.5499999999999999
+      ],
+      "material": "stone",
+      "size": [
+        0.7448000000000001,
+        0.59,
+        0.5880000000000001
+      ],
+      "anchor": "ground",
+      "spacing": 0.073
+    },
+    {
+      "id": "basalt-spire-6",
+      "kind": "cone",
+      "at": [
+        3.59,
+        -0.045,
+        -0.76
+      ],
+      "material": "stone",
+      "radius": 0.27,
+      "topRadius": 0.20520000000000002,
+      "height": 0.78,
+      "anchor": "ground",
+      "tilt": -0.04,
+      "spacing": 0.074,
+      "shadow": 0.54,
+      "keepOut": 0.27
+    },
+    {
+      "id": "basalt-cap-6",
+      "kind": "rock",
+      "at": [
+        3.59,
+        0.7000000000000001,
+        -0.84
+      ],
+      "material": "stone",
+      "size": [
+        0.5265,
+        0.1701,
+        0.43740000000000007
+      ],
+      "anchor": "ground",
+      "spacing": 0.071
+    },
+    {
+      "id": "basalt-foot-6",
+      "kind": "rock",
+      "at": [
+        3.71,
+        0.17,
+        -0.6
+      ],
+      "material": "stone",
+      "size": [
+        0.7182000000000001,
+        0.59,
+        0.5670000000000001
+      ],
+      "anchor": "ground",
+      "spacing": 0.073
+    },
+    {
+      "id": "basalt-spire-7",
+      "kind": "cone",
+      "at": [
+        3.74,
+        -0.045,
+        -1.12
+      ],
+      "material": "stone",
+      "radius": 0.33,
+      "topRadius": 0.2508,
+      "height": 1.04,
+      "anchor": "ground",
+      "tilt": 0.1,
+      "spacing": 0.074,
+      "shadow": 0.66,
+      "keepOut": 0.33
+    },
+    {
+      "id": "basalt-cap-7",
+      "kind": "rock",
+      "at": [
+        3.74,
+        0.9600000000000001,
+        -1.2000000000000002
+      ],
+      "material": "stone",
+      "size": [
+        0.6435,
+        0.2079,
+        0.5346000000000001
+      ],
+      "anchor": "ground",
+      "spacing": 0.071
+    },
+    {
+      "id": "basalt-foot-7",
+      "kind": "rock",
+      "at": [
+        3.8600000000000003,
+        0.17,
+        -0.9600000000000001
+      ],
+      "material": "stone",
+      "size": [
+        0.8778000000000001,
+        0.59,
+        0.6930000000000001
+      ],
+      "anchor": "ground",
+      "spacing": 0.073
+    },
+    {
+      "id": "basalt-spire-8",
+      "kind": "cone",
+      "at": [
+        3.55,
+        -0.045,
+        -1.56
+      ],
+      "material": "stone",
+      "radius": 0.33,
+      "topRadius": 0.2508,
+      "height": 1.19,
+      "anchor": "ground",
+      "tilt": -0.04,
+      "spacing": 0.074,
+      "shadow": 0.66,
+      "keepOut": 0.33
+    },
+    {
+      "id": "basalt-cap-8",
+      "kind": "rock",
+      "at": [
+        3.55,
+        1.1099999999999999,
+        -1.6400000000000001
+      ],
+      "material": "stone",
+      "size": [
+        0.6435,
+        0.2079,
+        0.5346000000000001
+      ],
+      "anchor": "ground",
+      "spacing": 0.071
+    },
+    {
+      "id": "basalt-foot-8",
+      "kind": "rock",
+      "at": [
+        3.67,
+        0.17,
+        -1.4000000000000001
+      ],
+      "material": "stone",
+      "size": [
+        0.8778000000000001,
+        0.59,
+        0.6930000000000001
+      ],
+      "anchor": "ground",
+      "spacing": 0.073
+    },
+    {
+      "id": "palm-a-trunk-0",
+      "kind": "beam",
+      "at": [
+        2.97,
+        0.17000000000000004,
+        -2.03
+      ],
+      "material": "wood",
+      "to": [
+        2.9988316631493235,
+        0.99,
+        -2.038290669456923
+      ],
+      "radius": 0.125,
+      "spacing": 0.057,
+      "endRadius": 0.119
+    },
+    {
+      "id": "palm-a-trunk-1",
+      "kind": "beam",
+      "at": [
+        2.9988316631493235,
+        0.99,
+        -2.038290669456923
+      ],
+      "material": "wood",
+      "to": [
+        3.0949372069804,
+        1.54,
+        -2.0659262343133347
+      ],
+      "radius": 0.119,
+      "spacing": 0.057,
+      "endRadius": 0.102
+    },
+    {
+      "id": "palm-a-trunk-knuckle-1",
+      "kind": "rock",
+      "at": [
+        2.9988316631493235,
+        0.99,
+        -2.038290669456923
+      ],
+      "material": "wood",
+      "size": [
+        0.25942,
+        0.25942,
+        0.25942
+      ],
+      "spacing": 0.057
+    },
+    {
+      "id": "palm-a-trunk-2",
+      "kind": "beam",
+      "at": [
+        3.0949372069804,
+        1.54,
+        -2.0659262343133347
+      ],
+      "material": "wood",
+      "to": [
+        3.2294849683439084,
+        2.13,
+        -2.1046160251123105
+      ],
+      "radius": 0.102,
+      "spacing": 0.057,
+      "endRadius": 0.085
+    },
+    {
+      "id": "palm-a-trunk-knuckle-2",
+      "kind": "rock",
+      "at": [
+        3.0949372069804,
+        1.54,
+        -2.0659262343133347
+      ],
+      "material": "wood",
+      "size": [
+        0.22236,
+        0.22236,
+        0.22236
+      ],
+      "spacing": 0.057
+    },
+    {
+      "id": "palm-a-trunk-3",
+      "kind": "beam",
+      "at": [
+        3.2294849683439084,
+        2.13,
+        -2.1046160251123105
+      ],
+      "material": "wood",
+      "to": [
+        3.4203761710798783,
+        2.57,
+        -2.128291935190169
+      ],
+      "radius": 0.085,
+      "spacing": 0.057,
+      "endRadius": 0.065
+    },
+    {
+      "id": "palm-a-trunk-knuckle-3",
+      "kind": "rock",
+      "at": [
+        3.2294849683439084,
+        2.13,
+        -2.1046160251123105
+      ],
+      "material": "wood",
+      "size": [
+        0.18530000000000002,
+        0.18530000000000002,
+        0.18530000000000002
+      ],
+      "spacing": 0.057
+    },
+    {
+      "id": "palm-a-spine-0",
+      "kind": "beam",
+      "at": [
+        3.4203761710798783,
+        2.57,
+        -2.128291935190169
+      ],
+      "material": "leaf",
+      "to": [
+        3.745597331404243,
+        2.8643205588864897,
+        -2.221810686664265
+      ],
+      "radius": 0.062,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-a-tip-0",
+      "kind": "beam",
+      "at": [
+        3.745597331404243,
+        2.8643205588864897,
+        -2.221810686664265
+      ],
+      "material": "leaf",
+      "to": [
+        4.236888871468709,
+        2.026897788815487,
+        -2.36308369421024
+      ],
+      "radius": 0.053,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-0-0--1",
+      "kind": "beam",
+      "at": [
+        3.5380093567291167,
+        2.7373513374453635,
+        -2.1621178665744165
+      ],
+      "material": "leaf",
+      "to": [
+        3.5806195964937952,
+        2.831351048666317,
+        -2.378683721686818
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-0-0-1",
+      "kind": "beam",
+      "at": [
+        3.5380093567291167,
+        2.7373513374453635,
+        -2.1621178665744165
+      ],
+      "material": "leaf",
+      "to": [
+        3.689147893327889,
+        2.831351048666317,
+        -2.0012653102125406
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-0-1--1",
+      "kind": "beam",
+      "at": [
+        3.6528747027160198,
+        2.8426330801670026,
+        -2.1951478936907995
+      ],
+      "material": "leaf",
+      "to": [
+        3.680514383686304,
+        2.8637785649446412,
+        -2.46377542012658
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-0-1-1",
+      "kind": "beam",
+      "at": [
+        3.6528747027160198,
+        2.8426330801670026,
+        -2.1951478936907995
+      ],
+      "material": "leaf",
+      "to": [
+        3.818983798109187,
+        2.8637785649446412,
+        -1.9822336660055446
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-0-2--1",
+      "kind": "beam",
+      "at": [
+        3.7677400487029233,
+        2.8598752839461,
+        -2.228177920807182
+      ],
+      "material": "leaf",
+      "to": [
+        3.789999230025924,
+        2.7951610886494818,
+        -2.5155166929646198
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-0-2-1",
+      "kind": "beam",
+      "at": [
+        3.7677400487029233,
+        2.8598752839461,
+        -2.228177920807182
+      ],
+      "material": "leaf",
+      "to": [
+        3.9392296437433743,
+        2.7951610886494818,
+        -1.9965524474002705
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-0-3--1",
+      "kind": "beam",
+      "at": [
+        3.8826053946898265,
+        2.7751546498033894,
+        -2.261207947923565
+      ],
+      "material": "leaf",
+      "to": [
+        3.910504587603651,
+        2.628055411862018,
+        -2.5289329946527004
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-0-3-1",
+      "kind": "beam",
+      "at": [
+        3.8826053946898265,
+        2.7751546498033894,
+        -2.261207947923565
+      ],
+      "material": "leaf",
+      "to": [
+        4.048454978139453,
+        2.628055411862018,
+        -2.0491961999449555
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-0-4--1",
+      "kind": "beam",
+      "at": [
+        3.99747074067673,
+        2.5941249520012053,
+        -2.294237975039948
+      ],
+      "material": "leaf",
+      "to": [
+        4.040531010847101,
+        2.3837939774287706,
+        -2.5092388027282944
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-0-4-1",
+      "kind": "beam",
+      "at": [
+        3.99747074067673,
+        2.5941249520012053,
+        -2.294237975039948
+      ],
+      "material": "leaf",
+      "to": [
+        4.1481592468698105,
+        2.3837939774287706,
+        -2.134950446102127
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-spine-1",
+      "kind": "beam",
+      "at": [
+        3.4203761710798783,
+        2.57,
+        -2.128291935190169
+      ],
+      "material": "leaf",
+      "to": [
+        3.7575725921975485,
+        2.8643205588864897,
+        -1.888785080203856
+      ],
+      "radius": 0.062,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-a-tip-1",
+      "kind": "beam",
+      "at": [
+        3.7575725921975485,
+        2.8643205588864897,
+        -1.888785080203856
+      ],
+      "material": "leaf",
+      "to": [
+        4.26695441984339,
+        2.026897788815487,
+        -1.5269768524585747
+      ],
+      "radius": 0.053,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-1-0--1",
+      "kind": "beam",
+      "at": [
+        3.5423408340373337,
+        2.7373513374453635,
+        -2.0416617961525665
+      ],
+      "material": "leaf",
+      "to": [
+        3.7564879761110213,
+        2.831351048666317,
+        -2.1304030136055676
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-1-0-1",
+      "kind": "beam",
+      "at": [
+        3.5423408340373337,
+        2.7373513374453635,
+        -2.0416617961525665
+      ],
+      "material": "leaf",
+      "to": [
+        3.529076666246513,
+        2.831351048666317,
+        -1.8102356438141023
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-1-1--1",
+      "kind": "beam",
+      "at": [
+        3.661435740219319,
+        2.8426330801670026,
+        -1.9570700133276133
+      ],
+      "material": "leaf",
+      "to": [
+        3.906952345227096,
+        2.8637785649446412,
+        -2.089975606094059
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-1-1-1",
+      "kind": "beam",
+      "at": [
+        3.661435740219319,
+        2.8426330801670026,
+        -1.9570700133276133
+      ],
+      "material": "leaf",
+      "to": [
+        3.61680210949441,
+        2.8637785649446412,
+        -1.681479485675705
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-1-2--1",
+      "kind": "beam",
+      "at": [
+        3.7805306464013047,
+        2.8598752839461,
+        -1.8724782305026602
+      ],
+      "material": "leaf",
+      "to": [
+        4.037321605731482,
+        2.7951610886494818,
+        -2.021256738172286
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-1-2-1",
+      "kind": "beam",
+      "at": [
+        3.7805306464013047,
+        2.8598752839461,
+        -1.8724782305026602
+      ],
+      "material": "leaf",
+      "to": [
+        3.7246226613539943,
+        2.7951610886494818,
+        -1.5810147879475713
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-1-3--1",
+      "kind": "beam",
+      "at": [
+        3.8996255525832906,
+        2.7751546498033894,
+        -1.787886447677707
+      ],
+      "material": "leaf",
+      "to": [
+        4.144598373594381,
+        2.628055411862018,
+        -1.9200264589431386
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-1-3-1",
+      "kind": "beam",
+      "at": [
+        3.8996255525832906,
+        2.7751546498033894,
+        -1.787886447677707
+      ],
+      "material": "leaf",
+      "to": [
+        3.855535705855067,
+        2.628055411862018,
+        -1.5130615015268125
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-1-4--1",
+      "kind": "beam",
+      "at": [
+        4.0187204587652765,
+        2.5941249520012053,
+        -1.7032946648527538
+      ],
+      "material": "leaf",
+      "to": [
+        4.231924602496387,
+        2.3837939774287706,
+        -1.7907082557279899
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-1-4-1",
+      "kind": "beam",
+      "at": [
+        4.0187204587652765,
+        2.5941249520012053,
+        -1.7032946648527538
+      ],
+      "material": "leaf",
+      "to": [
+        4.006399289317033,
+        2.3837939774287706,
+        -1.473196139092055
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-spine-2",
+      "kind": "beam",
+      "at": [
+        3.4203761710798783,
+        2.57,
+        -2.128291935190169
+      ],
+      "material": "leaf",
+      "to": [
+        3.4475397068829725,
+        2.8643205588864897,
+        -1.6402472832138626
+      ],
+      "radius": 0.062,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-a-tip-2",
+      "kind": "beam",
+      "at": [
+        3.4475397068829725,
+        2.8643205588864897,
+        -1.6402472832138626
+      ],
+      "material": "leaf",
+      "to": [
+        3.488573984372753,
+        2.026897788815487,
+        -0.9029883408666766
+      ],
+      "radius": 0.053,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-2-0--1",
+      "kind": "beam",
+      "at": [
+        3.4302012797746144,
+        2.7373513374453635,
+        -1.9517651461774623
+      ],
+      "material": "leaf",
+      "to": [
+        3.6343453267034187,
+        2.831351048666317,
+        -1.8173020276768896
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-2-0-1",
+      "kind": "beam",
+      "at": [
+        3.4302012797746144,
+        2.7373513374453635,
+        -1.9517651461774623
+      ],
+      "material": "leaf",
+      "to": [
+        3.2422397648136103,
+        2.831351048666317,
+        -1.795478259245342
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-2-1--1",
+      "kind": "beam",
+      "at": [
+        3.439795209441239,
+        2.8426330801670026,
+        -1.7793919286709372
+      ],
+      "material": "leaf",
+      "to": [
+        3.698026895622818,
+        2.8637785649446412,
+        -1.6479392140737739
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-2-1-1",
+      "kind": "beam",
+      "at": [
+        3.439795209441239,
+        2.8426330801670026,
+        -1.7793919286709372
+      ],
+      "material": "leaf",
+      "to": [
+        3.197746055227461,
+        2.8637785649446412,
+        -1.6200946378354075
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-2-2--1",
+      "kind": "beam",
+      "at": [
+        3.449389139107864,
+        2.8598752839461,
+        -1.6070187111644119
+      ],
+      "material": "leaf",
+      "to": [
+        3.7270602148218446,
+        2.7951610886494818,
+        -1.4766479519814004
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-2-2-1",
+      "kind": "beam",
+      "at": [
+        3.449389139107864,
+        2.8598752839461,
+        -1.6070187111644119
+      ],
+      "material": "leaf",
+      "to": [
+        3.187900595361684,
+        2.7951610886494818,
+        -1.44663946491473
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-2-3--1",
+      "kind": "beam",
+      "at": [
+        3.4589830687744887,
+        2.7751546498033894,
+        -1.4346454936578867
+      ],
+      "material": "leaf",
+      "to": [
+        3.7162771554598324,
+        2.628055411862018,
+        -1.303140594250621
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-2-3-1",
+      "kind": "beam",
+      "at": [
+        3.4589830687744887,
+        2.7751546498033894,
+        -1.4346454936578867
+      ],
+      "material": "leaf",
+      "to": [
+        3.2178715140569456,
+        2.628055411862018,
+        -1.2754003876324593
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-2-4--1",
+      "kind": "beam",
+      "at": [
+        3.4685769984411134,
+        2.5941249520012053,
+        -1.2622722761513614
+      ],
+      "material": "leaf",
+      "to": [
+        3.671095115264693,
+        2.3837939774287706,
+        -1.1277186618110173
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-2-4-1",
+      "kind": "beam",
+      "at": [
+        3.4685769984411134,
+        2.5941249520012053,
+        -1.2622722761513614
+      ],
+      "material": "leaf",
+      "to": [
+        3.282241413585334,
+        2.3837939774287706,
+        -1.1060758850590127
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-spine-3",
+      "kind": "beam",
+      "at": [
+        3.4203761710798783,
+        2.57,
+        -2.128291935190169
+      ],
+      "material": "leaf",
+      "to": [
+        3.1679382960117106,
+        2.8643205588864897,
+        -1.9029262784652188
+      ],
+      "radius": 0.062,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-a-tip-3",
+      "kind": "beam",
+      "at": [
+        3.1679382960117106,
+        2.8643205588864897,
+        -1.9029262784652188
+      ],
+      "material": "leaf",
+      "to": [
+        2.7865959741002233,
+        2.026897788815487,
+        -1.5624802863913576
+      ],
+      "radius": 0.053,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-3-0--1",
+      "kind": "beam",
+      "at": [
+        3.32906885456586,
+        2.7373513374453635,
+        -2.046776697651357
+      ],
+      "material": "leaf",
+      "to": [
+        3.384642758065387,
+        2.831351048666317,
+        -1.8331697141906231
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-3-0-1",
+      "kind": "beam",
+      "at": [
+        3.32906885456586,
+        2.7373513374453635,
+        -2.046776697651357
+      ],
+      "material": "leaf",
+      "to": [
+        3.123106429749127,
+        2.831351048666317,
+        -2.1261232898716953
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-3-1--1",
+      "kind": "beam",
+      "at": [
+        3.239909945499231,
+        2.8426330801670026,
+        -1.9671794657016939
+      ],
+      "material": "leaf",
+      "to": [
+        3.3315605690261068,
+        2.8637785649446412,
+        -1.7131620191940184
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-3-1-1",
+      "kind": "beam",
+      "at": [
+        3.239909945499231,
+        2.8426330801670026,
+        -1.9671794657016939
+      ],
+      "material": "leaf",
+      "to": [
+        2.997870800655148,
+        2.8637785649446412,
+        -2.0869365209689734
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-3-2--1",
+      "kind": "beam",
+      "at": [
+        3.1507510364326015,
+        2.8598752839461,
+        -1.8875822337520305
+      ],
+      "material": "leaf",
+      "to": [
+        3.2553678278927,
+        2.7951610886494818,
+        -1.619041048674754
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-3-2-1",
+      "kind": "beam",
+      "at": [
+        3.1507510364326015,
+        2.8598752839461,
+        -1.8875822337520305
+      ],
+      "material": "leaf",
+      "to": [
+        2.8957457236552964,
+        2.7951610886494818,
+        -2.0218630275889113
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-3-3--1",
+      "kind": "beam",
+      "at": [
+        3.0615921273659716,
+        2.7751546498033894,
+        -1.8079850018023673
+      ],
+      "material": "leaf",
+      "to": [
+        3.1526173674412723,
+        2.628055411862018,
+        -1.554668063401884
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-3-3-1",
+      "kind": "beam",
+      "at": [
+        3.0615921273659716,
+        2.7751546498033894,
+        -1.8079850018023673
+      ],
+      "material": "leaf",
+      "to": [
+        2.820178365973465,
+        2.628055411862018,
+        -1.9270415489624546
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-3-4--1",
+      "kind": "beam",
+      "at": [
+        2.9724332182993423,
+        2.5941249520012053,
+        -1.728387769852704
+      ],
+      "material": "leaf",
+      "to": [
+        3.026922618463161,
+        2.3837939774287706,
+        -1.5159955665033187
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-3-4-1",
+      "kind": "beam",
+      "at": [
+        2.9724332182993423,
+        2.5941249520012053,
+        -1.728387769852704
+      ],
+      "material": "leaf",
+      "to": [
+        2.7675552968183177,
+        2.3837939774287706,
+        -1.8065195819616933
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-spine-4",
+      "kind": "beam",
+      "at": [
+        3.4203761710798783,
+        2.57,
+        -2.128291935190169
+      ],
+      "material": "leaf",
+      "to": [
+        3.0126545634989954,
+        2.8643205588864897,
+        -2.197776111170463
+      ],
+      "radius": 0.062,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-a-tip-4",
+      "kind": "beam",
+      "at": [
+        3.0126545634989954,
+        2.8643205588864897,
+        -2.197776111170463
+      ],
+      "material": "leaf",
+      "to": [
+        2.396734688217236,
+        2.026897788815487,
+        -2.302741568502396
+      ],
+      "radius": 0.053,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-4-0--1",
+      "kind": "beam",
+      "at": [
+        3.272902398125091,
+        2.7373513374453635,
+        -2.1534245094809137
+      ],
+      "material": "leaf",
+      "to": [
+        3.118465861208774,
+        2.831351048666317,
+        -1.9805564725317302
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-4-0-1",
+      "kind": "beam",
+      "at": [
+        3.272902398125091,
+        2.7373513374453635,
+        -2.1534245094809137
+      ],
+      "material": "leaf",
+      "to": [
+        3.1844409560570517,
+        2.831351048666317,
+        -2.367687374673676
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-4-1--1",
+      "kind": "beam",
+      "at": [
+        3.1288985962986513,
+        2.8426330801670026,
+        -2.177965729082464
+      ],
+      "material": "leaf",
+      "to": [
+        2.96536135417269,
+        2.8637785649446412,
+        -1.9516962650335572
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-4-1-1",
+      "kind": "beam",
+      "at": [
+        3.1288985962986513,
+        2.8426330801670026,
+        -2.177965729082464
+      ],
+      "material": "leaf",
+      "to": [
+        3.0495378594402567,
+        2.8637785649446412,
+        -2.4456300213749502
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-4-2--1",
+      "kind": "beam",
+      "at": [
+        2.9848947944722117,
+        2.8598752839461,
+        -2.2025069486840145
+      ],
+      "material": "leaf",
+      "to": [
+        2.818086709764953,
+        2.7951610886494818,
+        -1.9570447234549384
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-4-2-1",
+      "kind": "beam",
+      "at": [
+        2.9848947944722117,
+        2.8598752839461,
+        -2.2025069486840145
+      ],
+      "material": "leaf",
+      "to": [
+        2.908804900195115,
+        2.7951610886494818,
+        -2.4893640021566705
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-4-3--1",
+      "kind": "beam",
+      "at": [
+        2.840890992645772,
+        2.7751546498033894,
+        -2.2270481682855654
+      ],
+      "material": "leaf",
+      "to": [
+        2.677511509607429,
+        2.628055411862018,
+        -2.0017044083686684
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-4-3-1",
+      "kind": "beam",
+      "at": [
+        2.840890992645772,
+        2.7751546498033894,
+        -2.2270481682855654
+      ],
+      "material": "leaf",
+      "to": [
+        2.7613724966997593,
+        2.628055411862018,
+        -2.493786756446042
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-4-4--1",
+      "kind": "beam",
+      "at": [
+        2.6968871908193326,
+        2.5941249520012053,
+        -2.251589387887116
+      ],
+      "material": "leaf",
+      "to": [
+        2.5427242304684485,
+        2.3837939774287706,
+        -2.080326652799558
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-4-4-1",
+      "kind": "beam",
+      "at": [
+        2.6968871908193326,
+        2.5941249520012053,
+        -2.251589387887116
+      ],
+      "material": "leaf",
+      "to": [
+        2.6081521721858607,
+        2.3837939774287706,
+        -2.4642469512182537
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-spine-5",
+      "kind": "beam",
+      "at": [
+        3.4203761710798783,
+        2.57,
+        -2.128291935190169
+      ],
+      "material": "leaf",
+      "to": [
+        3.1841480325233307,
+        2.8643205588864897,
+        -2.556219156285192
+      ],
+      "radius": 0.062,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-a-tip-5",
+      "kind": "beam",
+      "at": [
+        3.1841480325233307,
+        2.8643205588864897,
+        -2.556219156285192
+      ],
+      "material": "leaf",
+      "to": [
+        2.827292759384716,
+        2.026897788815487,
+        -3.2026624051734176
+      ],
+      "radius": 0.053,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-5-0--1",
+      "kind": "beam",
+      "at": [
+        3.334931950750914,
+        2.7373513374453635,
+        -2.283074121543688
+      ],
+      "material": "leaf",
+      "to": [
+        3.092663159272015,
+        2.831351048666317,
+        -2.315646422793718
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-5-0-1",
+      "kind": "beam",
+      "at": [
+        3.334931950750914,
+        2.7373513374453635,
+        -2.283074121543688
+      ],
+      "material": "leaf",
+      "to": [
+        3.436469085217402,
+        2.831351048666317,
+        -2.505437186052395
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-5-1--1",
+      "kind": "beam",
+      "at": [
+        3.2514981826649847,
+        2.8426330801670026,
+        -2.4342143741006534
+      ],
+      "material": "leaf",
+      "to": [
+        2.961804277382864,
+        2.8637785649446412,
+        -2.4406066479948643
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-5-1-1",
+      "kind": "beam",
+      "at": [
+        3.2514981826649847,
+        2.8426330801670026,
+        -2.4342143741006534
+      ],
+      "material": "leaf",
+      "to": [
+        3.4004604309346935,
+        2.8637785649446412,
+        -2.68275746596518
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-5-2--1",
+      "kind": "beam",
+      "at": [
+        3.168064414579055,
+        2.8598752839461,
+        -2.585354626657619
+      ],
+      "material": "leaf",
+      "to": [
+        2.861325667377863,
+        2.7951610886494818,
+        -2.582337657390739
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-5-2-1",
+      "kind": "beam",
+      "at": [
+        3.168064414579055,
+        2.8598752839461,
+        -2.585354626657619
+      ],
+      "material": "leaf",
+      "to": [
+        3.3340715047678353,
+        2.7951610886494818,
+        -2.8433069616832354
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-5-3--1",
+      "kind": "beam",
+      "at": [
+        3.0846306464931255,
+        2.7751546498033894,
+        -2.7364948792145842
+      ],
+      "material": "leaf",
+      "to": [
+        2.795758847027141,
+        2.628055411862018,
+        -2.743340979173296
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-5-3-1",
+      "kind": "beam",
+      "at": [
+        3.0846306464931255,
+        2.7751546498033894,
+        -2.7364948792145842
+      ],
+      "material": "leaf",
+      "to": [
+        3.2327707889466977,
+        2.628055411862018,
+        -2.9845841450146096
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-5-4--1",
+      "kind": "beam",
+      "at": [
+        3.0011968784071956,
+        2.5941249520012053,
+        -2.8876351317715496
+      ],
+      "material": "leaf",
+      "to": [
+        2.7603537346611544,
+        2.3837939774287706,
+        -2.920994431589487
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-5-4-1",
+      "kind": "beam",
+      "at": [
+        3.0011968784071956,
+        2.5941249520012053,
+        -2.8876351317715496
+      ],
+      "material": "leaf",
+      "to": [
+        3.1013083651408255,
+        2.3837939774287706,
+        -3.1092111977123498
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-spine-6",
+      "kind": "beam",
+      "at": [
+        3.4203761710798783,
+        2.57,
+        -2.128291935190169
+      ],
+      "material": "leaf",
+      "to": [
+        3.550032343787232,
+        2.8643205588864897,
+        -2.4408680649232
+      ],
+      "radius": 0.062,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-a-tip-6",
+      "kind": "beam",
+      "at": [
+        3.550032343787232,
+        2.8643205588864897,
+        -2.4408680649232
+      ],
+      "material": "leaf",
+      "to": [
+        3.745895923834511,
+        2.026897788815487,
+        -2.9130575374986307
+      ],
+      "radius": 0.053,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-6-0--1",
+      "kind": "beam",
+      "at": [
+        3.4672730846123256,
+        2.7373513374453635,
+        -2.2413513863702015
+      ],
+      "material": "leaf",
+      "to": [
+        3.324522131005873,
+        2.831351048666317,
+        -2.409692015387137
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-6-0-1",
+      "kind": "beam",
+      "at": [
+        3.4672730846123256,
+        2.7373513374453635,
+        -2.2413513863702015
+      ],
+      "material": "leaf",
+      "to": [
+        3.687266013448691,
+        2.831351048666317,
+        -2.2592263240027317
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-6-1--1",
+      "kind": "beam",
+      "at": [
+        3.513066541355774,
+        2.8426330801670026,
+        -2.3517506151695278
+      ],
+      "material": "leaf",
+      "to": [
+        3.3202781433423687,
+        2.8637785649446412,
+        -2.5408467111487143
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-6-1-1",
+      "kind": "beam",
+      "at": [
+        3.513066541355774,
+        2.8426330801670026,
+        -2.3517506151695278
+      ],
+      "material": "leaf",
+      "to": [
+        3.783096914599091,
+        2.8637785649446412,
+        -2.348870085839806
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-6-2--1",
+      "kind": "beam",
+      "at": [
+        3.558859998099222,
+        2.8598752839461,
+        -2.4621498439688536
+      ],
+      "material": "leaf",
+      "to": [
+        3.348087872445445,
+        2.7951610886494818,
+        -2.658705566819912
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-6-2-1",
+      "kind": "beam",
+      "at": [
+        3.558859998099222,
+        2.8598752839461,
+        -2.4621498439688536
+      ],
+      "material": "leaf",
+      "to": [
+        3.846874098982912,
+        2.7951610886494818,
+        -2.4518096877672604
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-6-3--1",
+      "kind": "beam",
+      "at": [
+        3.6046534548426705,
+        2.7751546498033894,
+        -2.5725490727681795
+      ],
+      "material": "leaf",
+      "to": [
+        3.412732446926467,
+        2.628055411862018,
+        -2.7612853764614247
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-6-3-1",
+      "kind": "beam",
+      "at": [
+        3.6046534548426705,
+        2.7751546498033894,
+        -2.5725490727681795
+      ],
+      "material": "leaf",
+      "to": [
+        3.8738164379887867,
+        2.628055411862018,
+        -2.5700283357243996
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-6-4--1",
+      "kind": "beam",
+      "at": [
+        3.650446911586119,
+        2.5941249520012053,
+        -2.6829483015675057
+      ],
+      "material": "leaf",
+      "to": [
+        3.5092001350591935,
+        2.3837939774287706,
+        -2.8506649998851508
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-leaf-6-4-1",
+      "kind": "beam",
+      "at": [
+        3.650446911586119,
+        2.5941249520012053,
+        -2.6829483015675057
+      ],
+      "material": "leaf",
+      "to": [
+        3.8689356633429575,
+        2.3837939774287706,
+        -2.7014471698993257
+      ],
+      "radius": 0.062,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-a-crown",
+      "kind": "rock",
+      "at": [
+        3.4203761710798783,
+        2.573,
+        -2.128291935190169
+      ],
+      "material": "leaf",
+      "size": [
+        0.26,
+        0.31,
+        0.24
+      ],
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-b-trunk-0",
+      "kind": "beam",
+      "at": [
+        2.19,
+        0.24830000000000005,
+        -2.73
+      ],
+      "material": "wood",
+      "to": [
+        2.2083185320331427,
+        0.8469,
+        -2.717998275784258
+      ],
+      "radius": 0.09125,
+      "spacing": 0.057,
+      "endRadius": 0.08686999999999999
+    },
+    {
+      "id": "palm-b-trunk-1",
+      "kind": "beam",
+      "at": [
+        2.2083185320331427,
+        0.8469,
+        -2.717998275784258
+      ],
+      "material": "wood",
+      "to": [
+        2.2693803054769512,
+        1.2484,
+        -2.6779925283984514
+      ],
+      "radius": 0.08686999999999999,
+      "spacing": 0.057,
+      "endRadius": 0.07446
+    },
+    {
+      "id": "palm-b-trunk-knuckle-1",
+      "kind": "rock",
+      "at": [
+        2.2083185320331427,
+        0.8469,
+        -2.717998275784258
+      ],
+      "material": "wood",
+      "size": [
+        0.18937659999999998,
+        0.18937659999999998,
+        0.18937659999999998
+      ],
+      "spacing": 0.057
+    },
+    {
+      "id": "palm-b-trunk-2",
+      "kind": "beam",
+      "at": [
+        2.2693803054769512,
+        1.2484,
+        -2.6779925283984514
+      ],
+      "material": "wood",
+      "to": [
+        2.3548667882982834,
+        1.6790999999999998,
+        -2.6219844820583216
+      ],
+      "radius": 0.07446,
+      "spacing": 0.057,
+      "endRadius": 0.06205
+    },
+    {
+      "id": "palm-b-trunk-knuckle-2",
+      "kind": "rock",
+      "at": [
+        2.2693803054769512,
+        1.2484,
+        -2.6779925283984514
+      ],
+      "material": "wood",
+      "size": [
+        0.16232280000000002,
+        0.16232280000000002,
+        0.16232280000000002
+      ],
+      "spacing": 0.057
+    },
+    {
+      "id": "palm-b-trunk-3",
+      "kind": "beam",
+      "at": [
+        2.3548667882982834,
+        1.6790999999999998,
+        -2.6219844820583216
+      ],
+      "material": "wood",
+      "to": [
+        2.458882433625778,
+        2.0002999999999997,
+        -2.5276550299921463
+      ],
+      "radius": 0.06205,
+      "spacing": 0.057,
+      "endRadius": 0.04745
+    },
+    {
+      "id": "palm-b-trunk-knuckle-3",
+      "kind": "rock",
+      "at": [
+        2.3548667882982834,
+        1.6790999999999998,
+        -2.6219844820583216
+      ],
+      "material": "wood",
+      "size": [
+        0.135269,
+        0.135269,
+        0.135269
+      ],
+      "spacing": 0.057
+    },
+    {
+      "id": "palm-b-spine-0",
+      "kind": "beam",
+      "at": [
+        2.458882433625778,
+        2.0002999999999997,
+        -2.5276550299921463
+      ],
+      "material": "leaf",
+      "to": [
+        2.609724553799487,
+        2.2151540079871377,
+        -2.42882803211004
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-b-tip-0",
+      "kind": "beam",
+      "at": [
+        2.609724553799487,
+        2.2151540079871377,
+        -2.42882803211004
+      ],
+      "material": "leaf",
+      "to": [
+        2.8375924374661543,
+        1.6038353858353054,
+        -2.2795361842455817
+      ],
+      "radius": 0.038689999999999995,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-0-0--1",
+      "kind": "beam",
+      "at": [
+        2.51344234943329,
+        2.1224664763351155,
+        -2.4919090945879803
+      ],
+      "material": "leaf",
+      "to": [
+        2.6157182971188764,
+        2.1910862655264114,
+        -2.5499972328726455
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-0-0-1",
+      "kind": "beam",
+      "at": [
+        2.51344234943329,
+        2.1224664763351155,
+        -2.4919090945879803
+      ],
+      "material": "leaf",
+      "to": [
+        2.5010297924894873,
+        2.1910862655264114,
+        -2.3749452979905707
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-0-1--1",
+      "kind": "beam",
+      "at": [
+        2.566718502515919,
+        2.199322148521912,
+        -2.4570042400168535
+      ],
+      "material": "leaf",
+      "to": [
+        2.684814757454831,
+        2.214758352409588,
+        -2.5392393091911716
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-0-1-1",
+      "kind": "beam",
+      "at": [
+        2.566718502515919,
+        2.199322148521912,
+        -2.4570042400168535
+      ],
+      "material": "leaf",
+      "to": [
+        2.538485638318791,
+        2.214758352409588,
+        -2.315893512529791
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-0-2--1",
+      "kind": "beam",
+      "at": [
+        2.619994655598548,
+        2.211908957280653,
+        -2.4220993854457267
+      ],
+      "material": "leaf",
+      "to": [
+        2.7437768143681383,
+        2.1646675947141216,
+        -2.5130129919357933
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-0-2-1",
+      "kind": "beam",
+      "at": [
+        2.619994655598548,
+        2.211908957280653,
+        -2.4220993854457267
+      ],
+      "material": "leaf",
+      "to": [
+        2.5860758875707424,
+        2.1646675947141216,
+        -2.2723101206429157
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-0-3--1",
+      "kind": "beam",
+      "at": [
+        2.6732708086811776,
+        2.1500628943564744,
+        -2.3871945308745994
+      ],
+      "material": "leaf",
+      "to": [
+        2.7910928214398814,
+        2.0426804506592733,
+        -2.4690110173459097
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-0-3-1",
+      "kind": "beam",
+      "at": [
+        2.6732708086811776,
+        2.1500628943564744,
+        -2.3871945308745994
+      ],
+      "material": "leaf",
+      "to": [
+        2.645312186664258,
+        2.0426804506592733,
+        -2.2465023860905453
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-0-4--1",
+      "kind": "beam",
+      "at": [
+        2.7265469617638067,
+        2.01791121496088,
+        -2.3522896763034726
+      ],
+      "material": "leaf",
+      "to": [
+        2.828347334730429,
+        1.8643696035230026,
+        -2.4096519329925523
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-0-4-1",
+      "kind": "beam",
+      "at": [
+        2.7265469617638067,
+        2.01791121496088,
+        -2.3522896763034726
+      ],
+      "material": "leaf",
+      "to": [
+        2.7146099795389684,
+        1.8643696035230026,
+        -2.236051761301649
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-spine-1",
+      "kind": "beam",
+      "at": [
+        2.458882433625778,
+        2.0002999999999997,
+        -2.5276550299921463
+      ],
+      "material": "leaf",
+      "to": [
+        2.479394335728809,
+        2.2151540079871377,
+        -2.3082041209498976
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-b-tip-1",
+      "kind": "beam",
+      "at": [
+        2.479394335728809,
+        2.2151540079871377,
+        -2.3082041209498976
+      ],
+      "material": "leaf",
+      "to": [
+        2.510380400607856,
+        1.6038353858353054,
+        -1.9766931732477775
+      ],
+      "radius": 0.038689999999999995,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-1-0--1",
+      "kind": "beam",
+      "at": [
+        2.466301632258789,
+        2.1224664763351155,
+        -2.448279169274737
+      ],
+      "material": "leaf",
+      "to": [
+        2.576595673937099,
+        2.1910862655264114,
+        -2.3926488196888998
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-1-0-1",
+      "kind": "beam",
+      "at": [
+        2.466301632258789,
+        2.1224664763351155,
+        -2.448279169274737
+      ],
+      "material": "leaf",
+      "to": [
+        2.3682274471524973,
+        2.1910862655264114,
+        -2.3731728070907243
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-1-1--1",
+      "kind": "beam",
+      "at": [
+        2.4735462615122,
+        2.199322148521912,
+        -2.370770975868326
+      ],
+      "material": "leaf",
+      "to": [
+        2.612582934199741,
+        2.214758352409588,
+        -2.317827177165408
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-1-1-1",
+      "kind": "beam",
+      "at": [
+        2.4735462615122,
+        2.199322148521912,
+        -2.370770975868326
+      ],
+      "material": "leaf",
+      "to": [
+        2.3467294453966776,
+        2.214758352409588,
+        -2.2929780628013936
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-1-2--1",
+      "kind": "beam",
+      "at": [
+        2.480790890765611,
+        2.211908957280653,
+        -2.2932627824619147
+      ],
+      "material": "leaf",
+      "to": [
+        2.6301578202011546,
+        2.1646675947141216,
+        -2.241284544649307
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-1-2-1",
+      "kind": "beam",
+      "at": [
+        2.480790890765611,
+        2.211908957280653,
+        -2.2932627824619147
+      ],
+      "material": "leaf",
+      "to": [
+        2.3436438179020858,
+        2.1646675947141216,
+        -2.2145043085046723
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-1-3--1",
+      "kind": "beam",
+      "at": [
+        2.4880355200190216,
+        2.1500628943564744,
+        -2.2157545890555035
+      ],
+      "material": "leaf",
+      "to": [
+        2.626573944368735,
+        2.0426804506592733,
+        -2.162764219476333
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-1-3-1",
+      "kind": "beam",
+      "at": [
+        2.4880355200190216,
+        2.1500628943564744,
+        -2.2157545890555035
+      ],
+      "material": "leaf",
+      "to": [
+        2.3617169522413275,
+        2.0426804506592733,
+        -2.138008246864824
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-1-4--1",
+      "kind": "beam",
+      "at": [
+        2.495280149272433,
+        2.01791121496088,
+        -2.1382463956490922
+      ],
+      "material": "leaf",
+      "to": [
+        2.604710157879474,
+        1.8643696035230026,
+        -2.0825352855786026
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-1-4-1",
+      "kind": "beam",
+      "at": [
+        2.495280149272433,
+        2.01791121496088,
+        -2.1382463956490922
+      ],
+      "material": "leaf",
+      "to": [
+        2.3980699972374104,
+        1.8643696035230026,
+        -2.0632207939497316
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-spine-2",
+      "kind": "beam",
+      "at": [
+        2.458882433625778,
+        2.0002999999999997,
+        -2.5276550299921463
+      ],
+      "material": "leaf",
+      "to": [
+        2.2712278262641945,
+        2.2151540079871377,
+        -2.3469996381615106
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-b-tip-2",
+      "kind": "beam",
+      "at": [
+        2.2712278262641945,
+        2.2151540079871377,
+        -2.3469996381615106
+      ],
+      "material": "leaf",
+      "to": [
+        1.9877495896115902,
+        1.6038353858353054,
+        -2.0740946845450186
+      ],
+      "radius": 0.038689999999999995,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-2-0--1",
+      "kind": "beam",
+      "at": [
+        2.391007362877971,
+        2.1224664763351155,
+        -2.4623115903938313
+      ],
+      "material": "leaf",
+      "to": [
+        2.4076814579084345,
+        2.1910862655264114,
+        -2.3331164738135457
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-2-0-1",
+      "kind": "beam",
+      "at": [
+        2.391007362877971,
+        2.1224664763351155,
+        -2.4623115903938313
+      ],
+      "material": "leaf",
+      "to": [
+        2.2625390336746496,
+        2.1910862655264114,
+        -2.483882218223951
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-2-1--1",
+      "kind": "beam",
+      "at": [
+        2.324729352618348,
+        2.199322148521912,
+        -2.398505643491947
+      ],
+      "material": "leaf",
+      "to": [
+        2.361424615021174,
+        2.214758352409588,
+        -2.248513670177358
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-2-1-1",
+      "kind": "beam",
+      "at": [
+        2.324729352618348,
+        2.199322148521912,
+        -2.398505643491947
+      ],
+      "material": "leaf",
+      "to": [
+        2.176239856042664,
+        2.214758352409588,
+        -2.4408731280563707
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-2-2--1",
+      "kind": "beam",
+      "at": [
+        2.258451342358725,
+        2.211908957280653,
+        -2.334699696590063
+      ],
+      "material": "leaf",
+      "to": [
+        2.3023423203967974,
+        2.1646675947141216,
+        -2.1772332206960896
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-2-2-1",
+      "kind": "beam",
+      "at": [
+        2.258451342358725,
+        2.211908957280653,
+        -2.334699696590063
+      ],
+      "material": "leaf",
+      "to": [
+        2.1027661301477947,
+        2.1646675947141216,
+        -2.384541683733871
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-2-3--1",
+      "kind": "beam",
+      "at": [
+        2.192173332099102,
+        2.1500628943564744,
+        -2.270893749688179
+      ],
+      "material": "leaf",
+      "to": [
+        2.228521531167279,
+        2.0426804506592733,
+        -2.121262286143784
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-2-3-1",
+      "kind": "beam",
+      "at": [
+        2.192173332099102,
+        2.1500628943564744,
+        -2.270893749688179
+      ],
+      "material": "leaf",
+      "to": [
+        2.0440308988580673,
+        2.0426804506592733,
+        -2.3129007244824082
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-2-4--1",
+      "kind": "beam",
+      "at": [
+        2.125895321839479,
+        2.01791121496088,
+        -2.207087802786295
+      ],
+      "material": "leaf",
+      "to": [
+        2.141967559972097,
+        1.8643696035230026,
+        -2.078517861124447
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-2-4-1",
+      "kind": "beam",
+      "at": [
+        2.125895321839479,
+        2.01791121496088,
+        -2.207087802786295
+      ],
+      "material": "leaf",
+      "to": [
+        1.9980288495340033,
+        1.8643696035230026,
+        -2.228033255697977
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-spine-3",
+      "kind": "beam",
+      "at": [
+        2.458882433625778,
+        2.0002999999999997,
+        -2.5276550299921463
+      ],
+      "material": "leaf",
+      "to": [
+        2.280098952014019,
+        2.2151540079871377,
+        -2.551247135274793
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-b-tip-3",
+      "kind": "beam",
+      "at": [
+        2.280098952014019,
+        2.2151540079871377,
+        -2.551247135274793
+      ],
+      "material": "leaf",
+      "to": [
+        2.0100217776643405,
+        1.6038353858353054,
+        -2.5868862730421958
+      ],
+      "radius": 0.038689999999999995,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-3-0--1",
+      "kind": "beam",
+      "at": [
+        2.394216067936418,
+        2.1224664763351155,
+        -2.5361883446688482
+      ],
+      "material": "leaf",
+      "to": [
+        2.327272121773816,
+        2.1910862655264114,
+        -2.4394768698763403
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-3-0-1",
+      "kind": "beam",
+      "at": [
+        2.394216067936418,
+        2.1224664763351155,
+        -2.5361883446688482
+      ],
+      "material": "leaf",
+      "to": [
+        2.3546507059047808,
+        2.1910862655264114,
+        -2.6469546906935717
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-3-1--1",
+      "kind": "beam",
+      "at": [
+        2.3310712637926905,
+        2.199322148521912,
+        -2.5445208754708046
+      ],
+      "material": "leaf",
+      "to": [
+        2.2603506739768076,
+        2.214758352409588,
+        -2.4191895936262657
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-3-1-1",
+      "kind": "beam",
+      "at": [
+        2.3310712637926905,
+        2.199322148521912,
+        -2.5445208754708046
+      ],
+      "material": "leaf",
+      "to": [
+        2.295282545414334,
+        2.214758352409588,
+        -2.683907028547558
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-3-2--1",
+      "kind": "beam",
+      "at": [
+        2.267926459648963,
+        2.211908957280653,
+        -2.5528534062727606
+      ],
+      "material": "leaf",
+      "to": [
+        2.1958485237163803,
+        2.1646675947141216,
+        -2.417236011273486
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-3-2-1",
+      "kind": "beam",
+      "at": [
+        2.267926459648963,
+        2.211908957280653,
+        -2.5528534062727606
+      ],
+      "material": "leaf",
+      "to": [
+        2.2334950873873063,
+        2.1646675947141216,
+        -2.70252567250425
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-3-3--1",
+      "kind": "beam",
+      "at": [
+        2.2047816555052355,
+        2.1500628943564744,
+        -2.5611859370747165
+      ],
+      "material": "leaf",
+      "to": [
+        2.1341265331276746,
+        2.0426804506592733,
+        -2.436350774436804
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-3-3-1",
+      "kind": "beam",
+      "at": [
+        2.2047816555052355,
+        2.1500628943564744,
+        -2.5611859370747165
+      ],
+      "material": "leaf",
+      "to": [
+        2.1689274696885565,
+        2.0426804506592733,
+        -2.7000759709448445
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-3-4--1",
+      "kind": "beam",
+      "at": [
+        2.1416368513615076,
+        2.01791121496088,
+        -2.569518467876673
+      ],
+      "material": "leaf",
+      "to": [
+        2.074806434994205,
+        1.8643696035230026,
+        -2.4736673339408646
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-3-4-1",
+      "kind": "beam",
+      "at": [
+        2.1416368513615076,
+        2.01791121496088,
+        -2.569518467876673
+      ],
+      "material": "leaf",
+      "to": [
+        2.1019579595345714,
+        1.8643696035230026,
+        -2.6794244730446963
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-spine-4",
+      "kind": "beam",
+      "at": [
+        2.458882433625778,
+        2.0002999999999997,
+        -2.5276550299921463
+      ],
+      "material": "leaf",
+      "to": [
+        2.3451856674414864,
+        2.2151540079871377,
+        -2.7164736862912213
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-b-tip-4",
+      "kind": "beam",
+      "at": [
+        2.3451856674414864,
+        2.2151540079871377,
+        -2.7164736862912213
+      ],
+      "material": "leaf",
+      "to": [
+        2.1734309780992596,
+        1.6038353858353054,
+        -3.0017103798493983
+      ],
+      "radius": 0.038689999999999995,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-4-0--1",
+      "kind": "beam",
+      "at": [
+        2.4177580713889064,
+        2.1224664763351155,
+        -2.595951139717344
+      ],
+      "material": "leaf",
+      "to": [
+        2.294249469434897,
+        2.1910862655264114,
+        -2.598217561598938
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-4-0-1",
+      "kind": "beam",
+      "at": [
+        2.4177580713889064,
+        2.1224664763351155,
+        -2.595951139717344
+      ],
+      "material": "leaf",
+      "to": [
+        2.473532429658657,
+        2.1910862655264114,
+        -2.706172427971368
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-4-1--1",
+      "kind": "beam",
+      "at": [
+        2.3776013412046675,
+        2.199322148521912,
+        -2.6626402821548893
+      ],
+      "material": "leaf",
+      "to": [
+        2.2293621742721452,
+        2.214758352409588,
+        -2.6500152451145764
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-4-1-1",
+      "kind": "beam",
+      "at": [
+        2.3776013412046675,
+        2.199322148521912,
+        -2.6626402821548893
+      ],
+      "material": "leaf",
+      "to": [
+        2.4581062644529315,
+        2.214758352409588,
+        -2.7877530293308213
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-4-2--1",
+      "kind": "beam",
+      "at": [
+        2.3374446110204286,
+        2.211908957280653,
+        -2.729329424592435
+      ],
+      "material": "leaf",
+      "to": [
+        2.1803171455299504,
+        2.1646675947141216,
+        -2.7113523168260207
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-4-2-1",
+      "kind": "beam",
+      "at": [
+        2.3374446110204286,
+        2.211908957280653,
+        -2.729329424592435
+      ],
+      "material": "leaf",
+      "to": [
+        2.426837832826648,
+        2.1646675947141216,
+        -2.859794242494468
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-4-3--1",
+      "kind": "beam",
+      "at": [
+        2.2972878808361896,
+        2.1500628943564744,
+        -2.7960185670299804
+      ],
+      "material": "leaf",
+      "to": [
+        2.149477413798612,
+        2.0426804506592733,
+        -2.7836516707511483
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-4-3-1",
+      "kind": "beam",
+      "at": [
+        2.2972878808361896,
+        2.1500628943564744,
+        -2.7960185670299804
+      ],
+      "material": "leaf",
+      "to": [
+        2.3773641041895086,
+        2.0426804506592733,
+        -2.920873173444432
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-4-4--1",
+      "kind": "beam",
+      "at": [
+        2.2571311506519502,
+        2.01791121496088,
+        -2.8627077094675264
+      ],
+      "material": "leaf",
+      "to": [
+        2.134365974934939,
+        1.8643696035230026,
+        -2.865421783931233
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-4-4-1",
+      "kind": "beam",
+      "at": [
+        2.2571311506519502,
+        2.01791121496088,
+        -2.8627077094675264
+      ],
+      "material": "leaf",
+      "to": [
+        2.312162082684704,
+        1.8643696035230026,
+        -2.972481345139439
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-spine-5",
+      "kind": "beam",
+      "at": [
+        2.458882433625778,
+        2.0002999999999997,
+        -2.5276550299921463
+      ],
+      "material": "leaf",
+      "to": [
+        2.5495699558777924,
+        2.2151540079871377,
+        -2.771840196554943
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-b-tip-5",
+      "kind": "beam",
+      "at": [
+        2.5495699558777924,
+        2.2151540079871377,
+        -2.771840196554943
+      ],
+      "material": "leaf",
+      "to": [
+        2.686566000130836,
+        1.6038353858353054,
+        -3.14071566093704
+      ],
+      "radius": 0.038689999999999995,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-5-0--1",
+      "kind": "beam",
+      "at": [
+        2.4916843033765064,
+        2.1224664763351155,
+        -2.6159773242808173
+      ],
+      "material": "leaf",
+      "to": [
+        2.4206058025960293,
+        2.1910862655264114,
+        -2.7251434835064594
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-5-0-1",
+      "kind": "beam",
+      "at": [
+        2.4916843033765064,
+        2.1224664763351155,
+        -2.6159773242808173
+      ],
+      "material": "leaf",
+      "to": [
+        2.616789413158184,
+        2.1910862655264114,
+        -2.6522831791776924
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-5-1--1",
+      "kind": "beam",
+      "at": [
+        2.523714364427218,
+        2.199322148521912,
+        -2.7022214469391668
+      ],
+      "material": "leaf",
+      "to": [
+        2.425573997183407,
+        2.214758352409588,
+        -2.821438067671624
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-5-1-1",
+      "kind": "beam",
+      "at": [
+        2.523714364427218,
+        2.199322148521912,
+        -2.7022214469391668
+      ],
+      "material": "leaf",
+      "to": [
+        2.6758813406722295,
+        2.214758352409588,
+        -2.7284768403292268
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-5-2--1",
+      "kind": "beam",
+      "at": [
+        2.5557444254779296,
+        2.211908957280653,
+        -2.7884655695975162
+      ],
+      "material": "leaf",
+      "to": [
+        2.4478778773372953,
+        2.1646675947141216,
+        -2.911294380451608
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-5-2-1",
+      "kind": "beam",
+      "at": [
+        2.5557444254779296,
+        2.211908957280653,
+        -2.7884655695975162
+      ],
+      "material": "leaf",
+      "to": [
+        2.717637582619764,
+        2.1646675947141216,
+        -2.811108772865942
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-5-3--1",
+      "kind": "beam",
+      "at": [
+        2.5877744865286414,
+        2.1500628943564744,
+        -2.8747096922558657
+      ],
+      "material": "leaf",
+      "to": [
+        2.4901032318716196,
+        2.0426804506592733,
+        -2.9937520900461516
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-5-3-1",
+      "kind": "beam",
+      "at": [
+        2.5877744865286414,
+        2.1500628943564744,
+        -2.8747096922558657
+      ],
+      "material": "leaf",
+      "to": [
+        2.739472350186863,
+        2.0426804506592733,
+        -2.901139308588097
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-5-4--1",
+      "kind": "beam",
+      "at": [
+        2.6198045475793528,
+        2.01791121496088,
+        -2.960953814914215
+      ],
+      "material": "leaf",
+      "to": [
+        2.549539554357981,
+        1.8643696035230026,
+        -3.0698178469226023
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-5-4-1",
+      "kind": "beam",
+      "at": [
+        2.6198045475793528,
+        2.01791121496088,
+        -2.960953814914215
+      ],
+      "material": "leaf",
+      "to": [
+        2.7440961498019245,
+        1.8643696035230026,
+        -2.9975617970283452
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-spine-6",
+      "kind": "beam",
+      "at": [
+        2.458882433625778,
+        2.0002999999999997,
+        -2.5276550299921463
+      ],
+      "material": "leaf",
+      "to": [
+        2.630197015506867,
+        2.2151540079871377,
+        -2.5839705230983703
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.045,
+      "spacing": 0.055
+    },
+    {
+      "id": "palm-b-tip-6",
+      "kind": "beam",
+      "at": [
+        2.630197015506867,
+        2.2151540079871377,
+        -2.5839705230983703
+      ],
+      "material": "leaf",
+      "to": [
+        2.888991383880427,
+        1.6038353858353054,
+        -2.669042863748198
+      ],
+      "radius": 0.038689999999999995,
+      "endRadius": 0.019,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-6-0--1",
+      "kind": "beam",
+      "at": [
+        2.520847282391278,
+        2.1224664763351155,
+        -2.548024463668866
+      ],
+      "material": "leaf",
+      "to": [
+        2.539200157479771,
+        2.1910862655264114,
+        -2.664204381298159
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-6-0-1",
+      "kind": "beam",
+      "at": [
+        2.520847282391278,
+        2.1224664763351155,
+        -2.548024463668866
+      ],
+      "material": "leaf",
+      "to": [
+        2.604554158210668,
+        2.1910862655264114,
+        -2.4653942015071095
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-6-1--1",
+      "kind": "beam",
+      "at": [
+        2.5813541347152373,
+        2.199322148521912,
+        -2.5679146165531916
+      ],
+      "material": "leaf",
+      "to": [
+        2.59069197926394,
+        2.214758352409588,
+        -2.711518713611339
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-6-1-1",
+      "kind": "beam",
+      "at": [
+        2.5813541347152373,
+        2.199322148521912,
+        -2.5679146165531916
+      ],
+      "material": "leaf",
+      "to": [
+        2.6740760410744175,
+        2.214758352409588,
+        -2.4578601749625824
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-6-2--1",
+      "kind": "beam",
+      "at": [
+        2.6418609870391965,
+        2.211908957280653,
+        -2.5878047694375175
+      ],
+      "material": "leaf",
+      "to": [
+        2.64795878094545,
+        2.1646675947141216,
+        -2.741265264628194
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-6-2-1",
+      "kind": "beam",
+      "at": [
+        2.6418609870391965,
+        2.211908957280653,
+        -2.5878047694375175
+      ],
+      "material": "leaf",
+      "to": [
+        2.7378229440408255,
+        2.1646675947141216,
+        -2.467893929714379
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-6-3--1",
+      "kind": "beam",
+      "at": [
+        2.7023678393631556,
+        2.1500628943564744,
+        -2.6076949223218433
+      ],
+      "material": "leaf",
+      "to": [
+        2.711861957844487,
+        2.0426804506592733,
+        -2.7508236261631227
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-6-3-1",
+      "kind": "beam",
+      "at": [
+        2.7023678393631556,
+        2.1500628943564744,
+        -2.6076949223218433
+      ],
+      "material": "leaf",
+      "to": [
+        2.7949334717897067,
+        2.0426804506592733,
+        -2.4981158739481018
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-6-4--1",
+      "kind": "beam",
+      "at": [
+        2.7628746916871147,
+        2.01791121496088,
+        -2.627585075206169
+      ],
+      "material": "leaf",
+      "to": [
+        2.7814985678722843,
+        1.8643696035230026,
+        -2.7429405937757063
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-leaf-6-4-1",
+      "kind": "beam",
+      "at": [
+        2.7628746916871147,
+        2.01791121496088,
+        -2.627585075206169
+      ],
+      "material": "leaf",
+      "to": [
+        2.846310566409828,
+        1.8643696035230026,
+        -2.5457792121041702
+      ],
+      "radius": 0.04526,
+      "endRadius": 0.015,
+      "spacing": 0.051
+    },
+    {
+      "id": "palm-b-crown",
+      "kind": "rock",
+      "at": [
+        2.458882433625778,
+        2.00249,
+        -2.5276550299921463
+      ],
+      "material": "leaf",
+      "size": [
+        0.1898,
+        0.2263,
+        0.1752
+      ],
+      "spacing": 0.055
+    },
+    {
+      "id": "buried-step-0",
+      "kind": "box",
+      "at": [
+        -1.13,
+        0.024,
+        2.89
+      ],
+      "material": "stone",
+      "size": [
+        0.44,
+        0.103,
+        0.28
+      ],
+      "anchor": "ground",
+      "yaw": 0.31,
+      "spacing": 0.067
+    },
+    {
+      "id": "buried-step-1",
+      "kind": "box",
+      "at": [
+        -0.8849999999999999,
+        0.024,
+        2.6910000000000003
+      ],
+      "material": "stone",
+      "size": [
+        0.428,
+        0.103,
+        0.28
+      ],
+      "anchor": "ground",
+      "yaw": 0.54,
+      "spacing": 0.067
+    },
+    {
+      "id": "buried-step-2",
+      "kind": "box",
+      "at": [
+        -0.6399999999999999,
+        0.024,
+        2.492
+      ],
+      "material": "stone",
+      "size": [
+        0.416,
+        0.103,
+        0.28
+      ],
+      "anchor": "ground",
+      "yaw": 0.77,
+      "spacing": 0.067
+    },
+    {
+      "id": "buried-step-3",
+      "kind": "box",
+      "at": [
+        -0.3949999999999999,
+        0.024,
+        2.293
+      ],
+      "material": "stone",
+      "size": [
+        0.404,
+        0.103,
+        0.28
+      ],
+      "anchor": "ground",
+      "yaw": 0.31,
+      "spacing": 0.067
+    },
+    {
+      "id": "buried-step-4",
+      "kind": "box",
+      "at": [
+        -0.1499999999999999,
+        0.024,
+        2.0940000000000003
+      ],
+      "material": "stone",
+      "size": [
+        0.392,
+        0.103,
+        0.28
+      ],
+      "anchor": "ground",
+      "yaw": 0.54,
+      "spacing": 0.067
+    },
+    {
+      "id": "buried-step-5",
+      "kind": "box",
+      "at": [
+        0.0950000000000002,
+        0.024,
+        1.895
+      ],
+      "material": "stone",
+      "size": [
+        0.38,
+        0.103,
+        0.28
+      ],
+      "anchor": "ground",
+      "yaw": 0.77,
+      "spacing": 0.067
+    },
+    {
+      "id": "buried-step-6",
+      "kind": "box",
+      "at": [
+        0.3400000000000001,
+        0.024,
+        1.6960000000000002
+      ],
+      "material": "stone",
+      "size": [
+        0.368,
+        0.103,
+        0.28
+      ],
+      "anchor": "ground",
+      "yaw": 0.31,
+      "spacing": 0.067
+    },
+    {
+      "id": "buried-step-7",
+      "kind": "box",
+      "at": [
+        0.585,
+        0.024,
+        1.497
+      ],
+      "material": "stone",
+      "size": [
+        0.356,
+        0.103,
+        0.28
+      ],
+      "anchor": "ground",
+      "yaw": 0.54,
+      "spacing": 0.067
+    },
+    {
+      "id": "buried-step-8",
+      "kind": "box",
+      "at": [
+        0.8300000000000001,
+        0.024,
+        1.298
+      ],
+      "material": "stone",
+      "size": [
+        0.344,
+        0.103,
+        0.28
+      ],
+      "anchor": "ground",
+      "yaw": 0.77,
+      "spacing": 0.067
+    },
+    {
+      "id": "ruin-foot-0",
+      "kind": "box",
+      "at": [
+        -2.94,
+        0.075,
+        1.66
+      ],
+      "material": "stone",
+      "size": [
+        0.52,
+        0.22,
+        0.49
+      ],
+      "anchor": "ground",
+      "yaw": 0.19
+    },
+    {
+      "id": "ruin-block-0",
+      "kind": "box",
+      "at": [
+        -2.94,
+        0.2,
+        1.66
+      ],
+      "material": "stone",
+      "size": [
+        0.35,
+        0.31,
+        0.3
+      ],
+      "anchor": "ground",
+      "yaw": 0.19,
+      "tilt": 0.17
+    },
+    {
+      "id": "ruin-foot-1",
+      "kind": "box",
+      "at": [
+        -2.66,
+        0.075,
+        1.39
+      ],
+      "material": "stone",
+      "size": [
+        0.52,
+        0.22,
+        0.49
+      ],
+      "anchor": "ground",
+      "yaw": 0.46
+    },
+    {
+      "id": "ruin-block-1",
+      "kind": "box",
+      "at": [
+        -2.66,
+        0.2,
+        1.39
+      ],
+      "material": "stone",
+      "size": [
+        0.35,
+        0.31,
+        0.3
+      ],
+      "anchor": "ground",
+      "yaw": 0.46,
+      "tilt": 0.11300000000000002
+    },
+    {
+      "id": "ruin-foot-2",
+      "kind": "box",
+      "at": [
+        -2.44,
+        0.075,
+        1.57
+      ],
+      "material": "stone",
+      "size": [
+        0.52,
+        0.22,
+        0.49
+      ],
+      "anchor": "ground",
+      "yaw": -0.14
+    },
+    {
+      "id": "ruin-block-2",
+      "kind": "box",
+      "at": [
+        -2.44,
+        0.2,
+        1.57
+      ],
+      "material": "stone",
+      "size": [
+        0.35,
+        0.31,
+        0.3
+      ],
+      "anchor": "ground",
+      "yaw": -0.14,
+      "tilt": 0.05600000000000001
+    },
+    {
+      "id": "ruin-foot-3",
+      "kind": "box",
+      "at": [
+        3.54,
+        0.075,
+        0.87
+      ],
+      "material": "stone",
+      "size": [
+        0.52,
+        0.22,
+        0.49
+      ],
+      "anchor": "ground",
+      "yaw": 0.23
+    },
+    {
+      "id": "ruin-block-3",
+      "kind": "box",
+      "at": [
+        3.54,
+        0.2,
+        0.87
+      ],
+      "material": "stone",
+      "size": [
+        0.35,
+        0.31,
+        0.3
+      ],
+      "anchor": "ground",
+      "yaw": 0.23,
+      "tilt": -0.0010000000000000009
+    },
+    {
+      "id": "wreck-plank-0",
+      "kind": "box",
+      "at": [
+        2.99,
+        0.34,
+        1.43
+      ],
+      "material": "wood",
+      "size": [
+        0.84,
+        0.09,
+        0.108
+      ],
+      "yaw": -0.51,
+      "tilt": 0.2,
+      "spacing": 0.054
+    },
+    {
+      "id": "wreck-plank-1",
+      "kind": "box",
+      "at": [
+        3.124,
+        0.35200000000000004,
+        1.575
+      ],
+      "material": "wood",
+      "size": [
+        0.754,
+        0.09,
+        0.108
+      ],
+      "yaw": -0.41000000000000003,
+      "tilt": 0.14,
+      "spacing": 0.054
+    },
+    {
+      "id": "wreck-plank-2",
+      "kind": "box",
+      "at": [
+        3.258,
+        0.36400000000000005,
+        1.72
+      ],
+      "material": "wood",
+      "size": [
+        0.6679999999999999,
+        0.09,
+        0.108
+      ],
+      "yaw": -0.31,
+      "tilt": 0.08000000000000002,
+      "spacing": 0.054
+    },
+    {
+      "id": "wreck-plank-3",
+      "kind": "box",
+      "at": [
+        3.3920000000000003,
+        0.376,
+        1.8649999999999998
+      ],
+      "material": "wood",
+      "size": [
+        0.582,
+        0.09,
+        0.108
+      ],
+      "yaw": -0.20999999999999996,
+      "tilt": 0.020000000000000018,
+      "spacing": 0.054
+    },
+    {
+      "id": "wreck-plank-4",
+      "kind": "box",
+      "at": [
+        3.5260000000000002,
+        0.388,
+        2.01
+      ],
+      "material": "wood",
+      "size": [
+        0.496,
+        0.09,
+        0.108
+      ],
+      "yaw": -0.10999999999999999,
+      "tilt": -0.03999999999999998,
+      "spacing": 0.054
+    },
+    {
+      "id": "shell-fragment-0",
+      "kind": "rock",
+      "at": [
+        2.2015932015370425,
+        0.07,
+        2.0516384199726354
+      ],
+      "material": "gold",
+      "size": [
+        0.14,
+        0.13,
+        0.17
+      ],
+      "anchor": "ground",
+      "yaw": 0,
+      "spacing": 0.053
+    },
+    {
+      "id": "shell-fragment-1",
+      "kind": "rock",
+      "at": [
+        1.4072328478180522,
+        0.07,
+        2.239582209546142
+      ],
+      "material": "gold",
+      "size": [
+        0.202,
+        0.13,
+        0.17
+      ],
+      "anchor": "ground",
+      "yaw": 0.77,
+      "spacing": 0.053
+    },
+    {
+      "id": "shell-fragment-2",
+      "kind": "rock",
+      "at": [
+        0.03243728143370805,
+        0.07,
+        2.851071293599422
+      ],
+      "material": "gold",
+      "size": [
+        0.264,
+        0.13,
+        0.17
+      ],
+      "anchor": "ground",
+      "yaw": 1.54,
+      "spacing": 0.053
+    },
+    {
+      "id": "shell-fragment-3",
+      "kind": "rock",
+      "at": [
+        -0.96388701852929,
+        0.07,
+        2.275162209386611
+      ],
+      "material": "gold",
+      "size": [
+        0.14,
+        0.13,
+        0.17
+      ],
+      "anchor": "ground",
+      "yaw": 2.31,
+      "spacing": 0.053
+    },
+    {
+      "id": "shell-fragment-4",
+      "kind": "rock",
+      "at": [
+        -2.354934869723829,
+        0.07,
+        2.0690282208455972
+      ],
+      "material": "gold",
+      "size": [
+        0.202,
+        0.13,
+        0.17
+      ],
+      "anchor": "ground",
+      "yaw": 3.08,
+      "spacing": 0.053
+    },
+    {
+      "id": "shell-fragment-5",
+      "kind": "rock",
+      "at": [
+        -3.2206314363353337,
+        0.07,
+        1.0568543113905187
+      ],
+      "material": "gold",
+      "size": [
+        0.264,
+        0.13,
+        0.17
+      ],
+      "anchor": "ground",
+      "yaw": 3.85,
+      "spacing": 0.053
+    },
+    {
+      "id": "shell-fragment-6",
+      "kind": "rock",
+      "at": [
+        -2.7399370671063723,
+        0.07,
+        0.17144370259114217
+      ],
+      "material": "gold",
+      "size": [
+        0.14,
+        0.13,
+        0.17
+      ],
+      "anchor": "ground",
+      "yaw": 4.62,
+      "spacing": 0.053
+    },
+    {
+      "id": "shell-fragment-7",
+      "kind": "rock",
+      "at": [
+        -2.733682173019946,
+        0.07,
+        -0.7887403208771218
+      ],
+      "material": "gold",
+      "size": [
+        0.202,
+        0.13,
+        0.17
+      ],
+      "anchor": "ground",
+      "yaw": 5.390000000000001,
+      "spacing": 0.053
+    },
+    {
+      "id": "shell-fragment-8",
+      "kind": "rock",
+      "at": [
+        -2.8006340641399077,
+        0.07,
+        -1.7575209240094598
+      ],
+      "material": "gold",
+      "size": [
+        0.264,
+        0.13,
+        0.17
+      ],
+      "anchor": "ground",
+      "yaw": 6.16,
+      "spacing": 0.053
+    },
+    {
+      "id": "shell-fragment-9",
+      "kind": "rock",
+      "at": [
+        -1.5586293317146989,
+        0.07,
+        -2.2697483228871747
+      ],
+      "material": "gold",
+      "size": [
+        0.14,
+        0.13,
+        0.17
+      ],
+      "anchor": "ground",
+      "yaw": 6.93,
+      "spacing": 0.053
+    },
+    {
+      "id": "shell-fragment-10",
+      "kind": "rock",
+      "at": [
+        -0.29420973813879653,
+        0.07,
+        -2.6570654707635026
+      ],
+      "material": "gold",
+      "size": [
+        0.202,
+        0.13,
+        0.17
+      ],
+      "anchor": "ground",
+      "yaw": 7.7,
+      "spacing": 0.053
+    },
+    {
+      "id": "shell-fragment-11",
+      "kind": "rock",
+      "at": [
+        0.8406478315997056,
+        0.07,
+        -2.5432132383263086
+      ],
+      "material": "gold",
+      "size": [
+        0.264,
+        0.13,
+        0.17
+      ],
+      "anchor": "ground",
+      "yaw": 8.47,
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-0-0-0",
+      "kind": "beam",
+      "at": [
+        -3.68,
+        0.16,
+        0.71
+      ],
+      "material": "lacquer",
+      "to": [
+        -3.68,
+        0.36,
+        0.7899999999999999
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-0-0-1",
+      "kind": "beam",
+      "at": [
+        -3.68,
+        0.36,
+        0.7899999999999999
+      ],
+      "material": "lacquer",
+      "to": [
+        -3.68,
+        0.41,
+        0.88
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-0-0-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -3.68,
+        0.36,
+        0.7899999999999999
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-0-1-0",
+      "kind": "beam",
+      "at": [
+        -3.6056958056664667,
+        0.16,
+        0.501515996429106
+      ],
+      "material": "lacquer",
+      "to": [
+        -3.544901464848121,
+        0.394,
+        0.44252666071517677
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-0-1-1",
+      "kind": "beam",
+      "at": [
+        -3.544901464848121,
+        0.394,
+        0.44252666071517677
+      ],
+      "material": "lacquer",
+      "to": [
+        -3.4908620507873698,
+        0.45899999999999996,
+        0.37616365803700635
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-0-1-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -3.544901464848121,
+        0.394,
+        0.44252666071517677
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-0-2-0",
+      "kind": "beam",
+      "at": [
+        -3.789578876612346,
+        0.16,
+        0.6004903147988994
+      ],
+      "material": "lacquer",
+      "to": [
+        -3.879234321113356,
+        0.428,
+        0.6074838579981656
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-0-2-1",
+      "kind": "beam",
+      "at": [
+        -3.879234321113356,
+        0.428,
+        0.6074838579981656
+      ],
+      "material": "lacquer",
+      "to": [
+        -3.9589280495586987,
+        0.508,
+        0.6153515940973402
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-0-2-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -3.879234321113356,
+        0.428,
+        0.6074838579981656
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-0-3-0",
+      "kind": "beam",
+      "at": [
+        -3.592704565842511,
+        0.16,
+        0.663013586035467
+      ],
+      "material": "lacquer",
+      "to": [
+        -3.521281028804565,
+        0.46199999999999997,
+        0.7116893100591116
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-0-3-1",
+      "kind": "beam",
+      "at": [
+        -3.521281028804565,
+        0.46199999999999997,
+        0.7116893100591116
+      ],
+      "material": "lacquer",
+      "to": [
+        -3.457793440326391,
+        0.5569999999999999,
+        0.766449499585712
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-0-3-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -3.521281028804565,
+        0.46199999999999997,
+        0.7116893100591116
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-1-0-0",
+      "kind": "beam",
+      "at": [
+        3.89,
+        0.16,
+        0.59
+      ],
+      "material": "lacquer",
+      "to": [
+        3.89,
+        0.36,
+        0.6699999999999999
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-1-0-1",
+      "kind": "beam",
+      "at": [
+        3.89,
+        0.36,
+        0.6699999999999999
+      ],
+      "material": "lacquer",
+      "to": [
+        3.89,
+        0.41,
+        0.76
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-1-0-knuckle-1",
+      "kind": "rock",
+      "at": [
+        3.89,
+        0.36,
+        0.6699999999999999
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-1-1-0",
+      "kind": "beam",
+      "at": [
+        3.9643041943335335,
+        0.16,
+        0.3815159964291061
+      ],
+      "material": "lacquer",
+      "to": [
+        4.025098535151879,
+        0.394,
+        0.3225266607151769
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-1-1-1",
+      "kind": "beam",
+      "at": [
+        4.025098535151879,
+        0.394,
+        0.3225266607151769
+      ],
+      "material": "lacquer",
+      "to": [
+        4.0791379492126305,
+        0.45899999999999996,
+        0.25616365803700647
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-1-1-knuckle-1",
+      "kind": "rock",
+      "at": [
+        4.025098535151879,
+        0.394,
+        0.3225266607151769
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-1-2-0",
+      "kind": "beam",
+      "at": [
+        3.7804211233876543,
+        0.16,
+        0.48049031479889937
+      ],
+      "material": "lacquer",
+      "to": [
+        3.690765678886644,
+        0.428,
+        0.4874838579981656
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-1-2-1",
+      "kind": "beam",
+      "at": [
+        3.690765678886644,
+        0.428,
+        0.4874838579981656
+      ],
+      "material": "lacquer",
+      "to": [
+        3.6110719504413016,
+        0.508,
+        0.49535159409734014
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-1-2-knuckle-1",
+      "kind": "rock",
+      "at": [
+        3.690765678886644,
+        0.428,
+        0.4874838579981656
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-1-3-0",
+      "kind": "beam",
+      "at": [
+        3.9772954341574893,
+        0.16,
+        0.543013586035467
+      ],
+      "material": "lacquer",
+      "to": [
+        4.048718971195435,
+        0.46199999999999997,
+        0.5916893100591116
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-1-3-1",
+      "kind": "beam",
+      "at": [
+        4.048718971195435,
+        0.46199999999999997,
+        0.5916893100591116
+      ],
+      "material": "lacquer",
+      "to": [
+        4.112206559673609,
+        0.5569999999999999,
+        0.646449499585712
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-1-3-knuckle-1",
+      "kind": "rock",
+      "at": [
+        4.048718971195435,
+        0.46199999999999997,
+        0.5916893100591116
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-2-0-0",
+      "kind": "beam",
+      "at": [
+        2.01,
+        0.16,
+        2.8400000000000003
+      ],
+      "material": "lacquer",
+      "to": [
+        2.01,
+        0.36,
+        2.9200000000000004
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-2-0-1",
+      "kind": "beam",
+      "at": [
+        2.01,
+        0.36,
+        2.9200000000000004
+      ],
+      "material": "lacquer",
+      "to": [
+        2.01,
+        0.41,
+        3.0100000000000002
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-2-0-knuckle-1",
+      "kind": "rock",
+      "at": [
+        2.01,
+        0.36,
+        2.9200000000000004
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-2-1-0",
+      "kind": "beam",
+      "at": [
+        2.084304194333533,
+        0.16,
+        2.631515996429106
+      ],
+      "material": "lacquer",
+      "to": [
+        2.1450985351518788,
+        0.394,
+        2.572526660715177
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-2-1-1",
+      "kind": "beam",
+      "at": [
+        2.1450985351518788,
+        0.394,
+        2.572526660715177
+      ],
+      "material": "lacquer",
+      "to": [
+        2.19913794921263,
+        0.45899999999999996,
+        2.5061636580370066
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-2-1-knuckle-1",
+      "kind": "rock",
+      "at": [
+        2.1450985351518788,
+        0.394,
+        2.572526660715177
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-2-2-0",
+      "kind": "beam",
+      "at": [
+        1.9004211233876538,
+        0.16,
+        2.7304903147988995
+      ],
+      "material": "lacquer",
+      "to": [
+        1.8107656788866435,
+        0.428,
+        2.7374838579981655
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-2-2-1",
+      "kind": "beam",
+      "at": [
+        1.8107656788866435,
+        0.428,
+        2.7374838579981655
+      ],
+      "material": "lacquer",
+      "to": [
+        1.7310719504413008,
+        0.508,
+        2.74535159409734
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-2-2-knuckle-1",
+      "kind": "rock",
+      "at": [
+        1.8107656788866435,
+        0.428,
+        2.7374838579981655
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-2-3-0",
+      "kind": "beam",
+      "at": [
+        2.097295434157489,
+        0.16,
+        2.793013586035467
+      ],
+      "material": "lacquer",
+      "to": [
+        2.168718971195435,
+        0.46199999999999997,
+        2.841689310059112
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-2-3-1",
+      "kind": "beam",
+      "at": [
+        2.168718971195435,
+        0.46199999999999997,
+        2.841689310059112
+      ],
+      "material": "lacquer",
+      "to": [
+        2.232206559673609,
+        0.5569999999999999,
+        2.896449499585712
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-2-3-knuckle-1",
+      "kind": "rock",
+      "at": [
+        2.168718971195435,
+        0.46199999999999997,
+        2.841689310059112
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-3-0-0",
+      "kind": "beam",
+      "at": [
+        -1.92,
+        0.16,
+        2.83
+      ],
+      "material": "lacquer",
+      "to": [
+        -1.92,
+        0.36,
+        2.91
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-3-0-1",
+      "kind": "beam",
+      "at": [
+        -1.92,
+        0.36,
+        2.91
+      ],
+      "material": "lacquer",
+      "to": [
+        -1.92,
+        0.41,
+        3
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-3-0-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -1.92,
+        0.36,
+        2.91
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-3-1-0",
+      "kind": "beam",
+      "at": [
+        -1.8456958056664665,
+        0.16,
+        2.621515996429106
+      ],
+      "material": "lacquer",
+      "to": [
+        -1.784901464848121,
+        0.394,
+        2.562526660715177
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-3-1-1",
+      "kind": "beam",
+      "at": [
+        -1.784901464848121,
+        0.394,
+        2.562526660715177
+      ],
+      "material": "lacquer",
+      "to": [
+        -1.7308620507873695,
+        0.45899999999999996,
+        2.4961636580370063
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-3-1-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -1.784901464848121,
+        0.394,
+        2.562526660715177
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-3-2-0",
+      "kind": "beam",
+      "at": [
+        -2.0295788766123457,
+        0.16,
+        2.7204903147988992
+      ],
+      "material": "lacquer",
+      "to": [
+        -2.119234321113356,
+        0.428,
+        2.7274838579981653
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-3-2-1",
+      "kind": "beam",
+      "at": [
+        -2.119234321113356,
+        0.428,
+        2.7274838579981653
+      ],
+      "material": "lacquer",
+      "to": [
+        -2.1989280495586985,
+        0.508,
+        2.73535159409734
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-3-2-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -2.119234321113356,
+        0.428,
+        2.7274838579981653
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    },
+    {
+      "id": "coral-3-3-0",
+      "kind": "beam",
+      "at": [
+        -1.8327045658425105,
+        0.16,
+        2.783013586035467
+      ],
+      "material": "lacquer",
+      "to": [
+        -1.7612810288045646,
+        0.46199999999999997,
+        2.8316893100591116
+      ],
+      "radius": 0.068,
+      "spacing": 0.053,
+      "endRadius": 0.059
+    },
+    {
+      "id": "coral-3-3-1",
+      "kind": "beam",
+      "at": [
+        -1.7612810288045646,
+        0.46199999999999997,
+        2.8316893100591116
+      ],
+      "material": "lacquer",
+      "to": [
+        -1.6977934403263906,
+        0.5569999999999999,
+        2.8864494995857117
+      ],
+      "radius": 0.059,
+      "spacing": 0.053,
+      "endRadius": 0.023
+    },
+    {
+      "id": "coral-3-3-knuckle-1",
+      "kind": "rock",
+      "at": [
+        -1.7612810288045646,
+        0.46199999999999997,
+        2.8316893100591116
+      ],
+      "material": "lacquer",
+      "size": [
+        0.12862,
+        0.12862,
+        0.12862
+      ],
+      "spacing": 0.053
+    }
+  ],
+  "motion": {
+    "groups": [
+      {
+        "id": "claw--1",
+        "pivot": [
+          -1.13,
+          1.81,
+          -0.4
+        ],
+        "keys": [
+          {
+            "at": 0
+          },
+          {
+            "at": 1.2,
+            "rotation": [
+              -0.1,
+              0,
+              -0.05
+            ]
+          },
+          {
+            "at": 2.8,
+            "rotation": [
+              -0.25,
+              -0.08,
+              -0.15
+            ]
+          },
+          {
+            "at": 3.65,
+            "rotation": [
+              0.16,
+              -0.12,
+              -0.012
+            ]
+          },
+          {
+            "at": 4.3,
+            "rotation": [
+              0.07,
+              -0.055,
+              0
+            ]
+          },
+          {
+            "at": 6.28,
+            "rotation": [
+              -0.055,
+              0.044,
+              0
+            ]
+          },
+          {
+            "at": 8
+          }
+        ]
+      },
+      {
+        "id": "jaw--1",
+        "parent": "claw--1",
+        "pivot": [
+          -2.26,
+          2.45,
+          1.07
+        ],
+        "keys": [
+          {
+            "at": 0
+          },
+          {
+            "at": 2.8,
+            "rotation": [
+              0.14,
+              0,
+              0
+            ]
+          },
+          {
+            "at": 3.65,
+            "rotation": [
+              -0.25,
+              0,
+              0
+            ]
+          },
+          {
+            "at": 4.3,
+            "rotation": [
+              -0.19,
+              0,
+              0
+            ]
+          },
+          {
+            "at": 6.1,
+            "rotation": [
+              0.08,
+              0,
+              0
+            ]
+          },
+          {
+            "at": 8
+          }
+        ]
+      },
+      {
+        "id": "claw-1",
+        "pivot": [
+          1.13,
+          1.81,
+          -0.4
+        ],
+        "keys": [
+          {
+            "at": 0
+          },
+          {
+            "at": 1.2,
+            "rotation": [
+              0.09,
+              0,
+              0.05
+            ]
+          },
+          {
+            "at": 2.8,
+            "rotation": [
+              -0.09,
+              0.08,
+              0.15
+            ]
+          },
+          {
+            "at": 3.65,
+            "rotation": [
+              0.13,
+              0.12,
+              0.012
+            ]
+          },
+          {
+            "at": 4.3,
+            "rotation": [
+              0.1,
+              0.055,
+              0
+            ]
+          },
+          {
+            "at": 6.28,
+            "rotation": [
+              -0.055,
+              -0.044,
+              0
+            ]
+          },
+          {
+            "at": 8
+          }
+        ]
+      },
+      {
+        "id": "jaw-1",
+        "parent": "claw-1",
+        "pivot": [
+          2.26,
+          1.36,
+          1.07
+        ],
+        "keys": [
+          {
+            "at": 0
+          },
+          {
+            "at": 2.8,
+            "rotation": [
+              0.14,
+              0,
+              0
+            ]
+          },
+          {
+            "at": 3.65,
+            "rotation": [
+              -0.25,
+              0,
+              0
+            ]
+          },
+          {
+            "at": 4.3,
+            "rotation": [
+              -0.19,
+              0,
+              0
+            ]
+          },
+          {
+            "at": 6.1,
+            "rotation": [
+              0.08,
+              0,
+              0
+            ]
+          },
+          {
+            "at": 8
+          }
+        ]
+      }
+    ]
+  }
+}

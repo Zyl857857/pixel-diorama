@@ -1,0 +1,66 @@
+[
+  {
+    "id": "emberfall-volcano",
+    "title": "余烬火山",
+    "caption": "熔岩、灰烬与烟柱",
+    "builder": "renderer/scripts/build.js",
+    "compose": false,
+    "poster": "../../showcase/emberfall-volcano.png"
+  },
+  {
+    "id": "pyramid-ruins",
+    "title": "金字塔遗迹",
+    "caption": "石阶、狮身人面像与绿洲",
+    "builder": "renderer/scripts/build.js",
+    "compose": false
+  },
+  {
+    "id": "machu-picchu",
+    "title": "马丘比丘",
+    "caption": "山脊、梯田与山雾",
+    "builder": "renderer/scripts/build.js",
+    "compose": true
+  },
+  {
+    "id": "cedar-spring-explore",
+    "title": "雪松温泉",
+    "caption": "雪松、泉雾与可操控角色",
+    "builder": "renderer/scripts/build.js",
+    "compose": false
+  },
+  {
+    "id": "dinosaur-valley",
+    "title": "侏罗纪河谷",
+    "caption": "异特龙饮水、两级瀑布与涟漪",
+    "builder": "renderer/scripts/build.js",
+    "compose": true
+  },
+  {
+    "id": "crab-island",
+    "title": "断潮岛",
+    "caption": "巨蟹、潮涌与挑战者",
+    "builder": "renderer/scripts/build.js",
+    "compose": true
+  },
+  {
+    "id": "eiffel-paris",
+    "title": "巴黎夜色",
+    "caption": "铁塔、河岸与夜间照明",
+    "builder": "renderer/scripts/build.js",
+    "compose": true
+  },
+  {
+    "id": "ash-gate",
+    "title": "灰钟关",
+    "caption": "灰钟、火光与可操控的守关人",
+    "builder": "renderer/scripts/build.js",
+    "compose": false
+  },
+  {
+    "id": "bone-dragon-awakens",
+    "title": "骨龙苏醒",
+    "caption": "骨架关节与展翼动画",
+    "builder": "renderer/scripts/build.js",
+    "compose": true
+  }
+]
