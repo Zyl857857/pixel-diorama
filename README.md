@@ -1,4 +1,4 @@
-[![Pixel Diorama · 断潮岛，巨蟹守卫与持剑勇士](docs/cover.jpg)](media/pixel-diorama-nine-worlds.mp4)
+[![Pixel Diorama · 方寸之间，雪龙瀑布与九座像素微缩场景](docs/cover.jpg)](media/pixel-diorama-nine-worlds.mp4)
 
 # Pixel Diorama
 
