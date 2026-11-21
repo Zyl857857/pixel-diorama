@@ -5,10 +5,12 @@ const fs=require('node:fs');
 const os=require('node:os');
 const path=require('node:path');
 const {inflateSync}=require('node:zlib');
+const {execFileSync}=require('node:child_process');
 const {build}=require('./build');
 const {generate}=require('./geometry');
 const walking=require('./walking');
 const sceneMotion=require('./motion');
+const sceneFluid=require('./fluid');
 const {compileAvatar}=require('./avatar');
 const {renderPreview}=require('./preview');
 const recipes=path.join(__dirname,'../assets/recipes');
@@ -41,6 +43,67 @@ try {
     assert.deepEqual(inflateSync(Buffer.from(scene.data,'base64')),Buffer.from(world.rows.buffer));
     console.log(theme+': '+scene.count+' splats, '+Buffer.byteLength(page)+' bytes');
   }
+  const cli=(...args)=>execFileSync(process.execPath,[path.join(__dirname,'build.js'),...args]);
+  const lightFile=path.join(temp,'preview.html');
+  const original=path.join(recipes,'cedar-spring.json');
+  cli(original,lightFile,'--preview');
+  assert.deepEqual(fs.readFileSync(path.join(temp,'preview-front.png')),
+    fs.readFileSync(path.join(temp,'cedar-spring-front.png')));
+  assert.ok(!fs.existsSync(path.join(temp,'preview-side.png')));
+  assert.ok(!fs.existsSync(path.join(temp,'preview-layout.json')));
+  const recovered=path.join(temp,'recovered','cedar-spring.json');
+  cli('--extract-recipe',lightFile,recovered);
+  assert.deepEqual(fs.readFileSync(recovered),fs.readFileSync(original));
+  console.log('Preview: matching full-review front image and lossless recipe extraction');
+
+  const detail=read('snowfall-cascade'), cascade=generate(detail);
+  const surfaces=new Set();
+  for(let i=11;i<cascade.rows.length;i+=12)surfaces.add(Math.floor(cascade.rows[i]));
+  assert.ok(cascade.rows.every(Number.isFinite));
+  assert.ok([3,5,6].every(kind=>surfaces.has(kind)));
+  const waterFrame=t=>renderPreview(cascade,0,384,288,t);
+  assert.notDeepEqual(waterFrame(0),waterFrame(1));
+  assert.deepEqual(waterFrame(0),waterFrame(8));
+  const detailFile=path.join(temp,'snowfall-cascade.html');
+  build(path.join(recipes,'snowfall-cascade.json'),detailFile,true);
+  const detailed=fs.readFileSync(detailFile,'utf8');
+  assert.match(detailed,/<canvas id="canvas" width="576" height="432"/);
+  const detailPoster=fs.readFileSync(path.join(temp,'snowfall-cascade-front.png'));
+  assert.deepEqual([detailPoster.readUInt32BE(16),detailPoster.readUInt32BE(20)],[576,432]);
+  const badCascade={...detail.shapes.find(shape=>shape.kind==='cascade'),to:[0,9,0]};
+  assert.throws(()=>generate({...detail,shapes:[badCascade]}),/downstream endpoint/);
+  const waterfall={id:'vertical-fall',kind:'cascade',at:[0,2,0],to:[0,0,0],
+    width:1,thickness:.28,strands:3,material:'flow',accent:'foam'};
+  const probe=generate({...detail,shapes:[waterfall],scatter:[]});
+  const middle=[];
+  for(let i=0;i<probe.rows.length;i+=12){
+    const [,y,z]=probe.rows.subarray(i,i+3);
+    if(Math.floor(probe.rows[i+11])===5&&Math.abs(y-1)<.05)middle.push(z);
+  }
+  // A straight vertical fall has no forward travel to disguise a flat cross-section.
+  assert.ok(Math.min(...middle)<-.08&&Math.max(...middle)>.08);
+  const [flow]=probe.meta.fluid;
+  const prepared=sceneFluid.prepare(probe.meta.fluid);
+  const at=t=>{
+    const rows=probe.rows.slice();
+    sceneFluid.apply(probe.meta.fluid,prepared,t,rows);
+    return rows;
+  };
+  const [start,next,last]=[0,.026,.052].map(at);
+  const falling=Array.from({length:flow.count},(_,i)=>(flow.first+i)*12).filter(i=>start[i+3]>.4&&next[i+3]>.4&&last[i+3]>.4&&start[i+1]<1.65&&start[i+1]>1.15);
+  assert.ok(falling.length>8);
+  assert.ok(falling.every(i=>start[i+1]-next[i+1]>.02&&next[i+1]-last[i+1]>start[i+1]-next[i+1]));
+  assert.ok(falling.every(i=>last[i+8]>start[i+8]));
+  const impact=(flow.first+flow.count)*12;
+  const visibleSparks=Array.from({length:Math.floor(flow.splash*.33)},(_,i)=>impact+12*i)
+    .filter(i=>start[i+3]>.28&&next[i+3]>.28);
+  assert.ok(visibleSparks.some(i=>next[i+1]>start[i+1]&&next[i+2]>start[i+2]));
+  assert.ok(visibleSparks.some(i=>next[i+1]<start[i+1]&&next[i+2]>start[i+2]));
+  assert.deepEqual(start,at(8));
+  assert.throws(()=>generate({...detail,shapes:[{...waterfall,thickness:0}]}),/positive thickness/);
+  assert.throws(()=>generate({...detail,shapes:[{...waterfall,strands:9}]}),/1 and 8 strands/);
+  console.log('Cascade: thickness, falling acceleration, streak stretch, impact arcs and loop checks passed');
+
   const recipe=read('cedar-spring'), low=generate(recipe);
   const high=generate({...recipe,water:{...recipe.water,level:.36}});
   for(const shape of recipe.shapes.filter(s=>s.anchor!=='ground')) {

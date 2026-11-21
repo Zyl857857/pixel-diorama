@@ -3,6 +3,10 @@
 const walking=require('./walking');
 const {compileAvatar}=require('./avatar');
 const sceneMotion=require('./motion');
+const surfaces=require('./surfaces');
+const sceneFluid=require('./fluid');
+const {dragon}=require('./dragon');
+const trees=require('./trees');
 
 const MAX_SPLATS = 215_000;
 const MAX_SCENE_COLORS = 56;
@@ -88,13 +92,15 @@ function validate(recipe) {
   for (const shape of recipe.shapes ?? []) {
     if (typeof shape.id!=='string' || !shape.id || ids.has(shape.id) || !point3(shape.at)) throw new Error('Give each shape a unique id and an XYZ position');
     ids.add(shape.id);
-    if (!['box','rock','cylinder','cone','dome','dish','gable','fir','reed','beam'].includes(shape.kind)) {
+    if (!Object.hasOwn(trees,shape.kind) && !['box','rock','cylinder','cone','dome','dish','gable','reed','beam','ledge','cascade','stream','dragon'].includes(shape.kind)) {
       throw new Error('Unknown shape ' + shape.kind + ' for ' + shape.id);
     }
     requireMaterial(shape.material, shape.id);
     if (shape.accent) requireMaterial(shape.accent, shape.id);
     if (shape.face) requireMaterial(shape.face, shape.id);
-    if (['box','gable'].includes(shape.kind) && (!point3(shape.size) || shape.size.some(n=>n<=0))) {
+    if (shape.kind==='dragon'&&shape.recess) requireMaterial(shape.recess, shape.id);
+    if (shape.moss) requireMaterial(shape.moss, shape.id);
+    if (['box','gable','ledge'].includes(shape.kind) && (!point3(shape.size) || shape.size.some(n=>n<=0))) {
       throw new Error(shape.id + ' needs three positive dimensions');
     }
     if (shape.size && (!point3(shape.size) || shape.size.some(n=>n<=0))) throw new Error('Invalid size for ' + shape.id);
@@ -103,14 +109,35 @@ function validate(recipe) {
     }
     if (shape.trunk) requireMaterial(shape.trunk, shape.id);
     if (shape.kind === 'beam' && !point3(shape.to)) throw new Error(shape.id + ' needs a beam endpoint');
+    if (shape.kind==='cascade'||shape.kind==='stream') {
+      const falling=shape.kind==='cascade';
+      if (!point3(shape.to)||!Number.isFinite(shape.width)||shape.width<=0
+          || (falling?shape.to[1]>=shape.at[1]:Math.hypot(shape.to[0]-shape.at[0],shape.to[2]-shape.at[2])<.01)) {
+        throw new Error(shape.id+' needs a positive width and a valid downstream endpoint');
+      }
+      for (const key of ['endWidth','splash']) {
+        if(shape[key]!==undefined&&(!Number.isFinite(shape[key])||shape[key]<=0))throw new Error(shape.id+' has invalid '+key);
+      }
+      if (falling&&shape.thickness!==undefined&&(!Number.isFinite(shape.thickness)||shape.thickness<=0)) {
+        throw new Error(shape.id+' needs a positive thickness');
+      }
+      if (falling&&shape.strands!==undefined&&(!Number.isInteger(shape.strands)||shape.strands<1||shape.strands>8)) {
+        throw new Error(shape.id+' needs between 1 and 8 strands');
+      }
+      if (shape.yaw||shape.tilt) throw new Error(shape.id+' uses world coordinates. Set its direction with to.');
+    }
+
   }
   if (recipe.scatter) for (const field of recipe.scatter) {
     requireMaterial(field.material, field.id);
     if (field.accent) requireMaterial(field.accent, field.id);
     if (field.trunk) requireMaterial(field.trunk, field.id);
     if (!field.id || !Number.isInteger(field.count) || field.count < 0 || field.count > 200 ||
-        !['rock','fir','reed'].includes(field.kind) || !Array.isArray(field.bounds) || field.bounds.length !== 4 ||
+        !(Object.hasOwn(trees,field.kind)||['rock','reed'].includes(field.kind)) || !Array.isArray(field.bounds) || field.bounds.length !== 4 ||
         !field.bounds.every(Number.isFinite)) throw new Error('Invalid scatter field');
+  }
+  if (recipe.resolution!==undefined && ![384,480,576].includes(recipe.resolution)) {
+    throw new Error('Use resolution 384, 480 or 576');
   }
   const camera = recipe.camera ?? {target:[0,.6,0],dist:16,yaw:-.35,pitch:.60};
   if (!point3(camera.target) || !(camera.dist > 0) || !Number.isFinite(camera.yaw) || !Number.isFinite(camera.pitch)) {
@@ -193,7 +220,11 @@ function generate(recipe) {
     }
   }
   for (const shape of shapes) {
-    if (shape.anchor === 'ground') shape.at[1] += height(shape.at[0],shape.at[2]);
+    if (shape.anchor === 'ground') {
+      const offset=height(shape.at[0],shape.at[2]);
+      shape.at[1]+=offset;
+      if(shape.kind==='cascade'||shape.kind==='stream') shape.to=[shape.to[0],shape.to[1]+offset,shape.to[2]];
+    }
     if (Object.hasOwn(shapePositions,shape.id)) throw new Error('Duplicate shape id ' + shape.id);
     shapePositions[shape.id] = [...shape.at];
   }
@@ -208,6 +239,13 @@ function generate(recipe) {
     lit+=(noise(seed+5,x*2.6+y*.24,z*2.6-y*.80)-.5)*(mat.texture ?? .21);
     lit+=(noise(seed+11,x*6.4+y*1.8,z*6.4)-.5)*.072;
     if (mat.pattern==='strata') lit+=Math.sin(14*y+.5*Math.sin(x*1.3+z*.78))*.12;
+    if (mat.pattern==='fracture' && Math.abs(normal[1])<.79) {
+      const across=Math.abs(normal[0])>.62?z:x;
+      const course=14*y+.74*noise(seed+27,across*2.6,y*.73);
+      const joint=6.6*across+.51*Math.floor(course)+noise(seed+47,x*3.3+y*2.1,z*3.3)*.35;
+      if (course-Math.floor(course)<.16||joint-Math.floor(joint)<.11) lit-=.21;
+      else lit+=(rand(seed+19,Math.floor(joint),Math.floor(course))-.5)*.20;
+    }
     if (mat.pattern==='planks' && Math.abs(normal[1])<.68) {
       const u=Math.abs(normal[0])>.62?z:x;
       const width=mat.pitch ?? .21;
@@ -302,6 +340,7 @@ function generate(recipe) {
   // Keep animated samples at the end of the authored geometry for partial GPU uploads.
   const ordered=motion?[...shapes].sort((a,b)=>(motion.ids.get(a.motion)??-1)-(motion.ids.get(b.motion)??-1)):shapes;
   let firstMoving=Infinity;
+  const fluid=[];
   for (const s of ordered) {
     const group=s.motion===undefined?null:motion.groups[motion.ids.get(s.motion)];
     if(group && group.range[1]===0) group.range[0]=rows.length/12;
@@ -311,9 +350,9 @@ function generate(recipe) {
     const yaw=s.yaw ?? 0, tilt=s.tilt ?? 0;
     const cy=Math.cos(yaw), sy=Math.sin(yaw), ct=Math.cos(tilt), st=Math.sin(tilt);
     const turn=([x,y,z])=>[x*cy+(y*st+z*ct)*sy,y*ct-z*st,-x*sy+(y*st+z*ct)*cy];
-    function emit(p,n,mat=s.material,gain=1) {
+    function emit(p,n,mat=s.material,gain=1,type=0) {
       const q=turn(p).map((v,i)=>v+s.at[i]);
-      splat(q,turn(n),mat,s.id,density*gain);
+      splat(q,turn(n),mat,s.id,density*gain,type);
     }
     function triangle(a,b,c,mat) {
       const ab=sub(b,a), ac=sub(c,a);
@@ -377,6 +416,17 @@ function generate(recipe) {
       }
     }
 
+    if (s.kind==='ledge'||s.kind==='cascade'||s.kind==='stream') {
+      surfaces[s.kind](s,density,emit,(x,z)=>noise(key,x,z));
+      if(s.kind!=='ledge'){
+        const flow=sceneFluid.compile(s,materials,key,rows.length/12,motion?.ids.get(s.motion));
+        const samples=flow.count+flow.splash;
+        if(rows.length/12+samples>MAX_SPLATS) throw new Error('Scene exceeded the splat budget. Reduce small geometry.');
+        for(let i=0;i<samples;i++) rows.push(...s.at,0,0,0,0,0,0,0,0,3);
+        fluid.push(flow);
+      }
+    }
+    if (s.kind==='dragon') dragon(s,density,emit,(x,z)=>noise(key,x,z));
     if (s.kind==='box') box([0,0,0],s.size);
     if (s.kind==='gable') {
       const [w,h,d]=s.size;
@@ -419,16 +469,7 @@ function generate(recipe) {
       }
       box([0,h*.66,0],[.06,h*.96,.06],s.accent??s.material);
     }
-    if (s.kind==='fir') {
-      const h=s.height??2.1;
-      radialShape(0,h*.79,[[0,h*.045],[1,h*.015]],s.trunk??s.material,{base:true});
-      for(let i=0;i<4;i++) {
-        const radius=h*(.255-i*.045)*(mix(.88,1.11,rand(key,i,5)));
-        const y=h*(.19+i*.186), top=h*(.36-i*.016);
-        radialShape(y,top,[[0,radius*.87],[.12,radius],[.43,radius*.55],[.76,radius*.27],[1,.013]],
-          s.material,{skew:.22,snow:true,base:true,detail:1.11});
-      }
-    }
+    if (Object.hasOwn(trees,s.kind)) trees[s.kind](s,density,emit,(x,z)=>noise(key,x,z));
     if (s.kind==='rock') {
       const [rx,ry,rz]=(s.size??[.6,.45,.5]).map(v=>v/2);
       const count=Math.max(34,Math.ceil(6.5*(rx*ry+rx*rz+ry*rz)/(density*density)));
@@ -489,6 +530,7 @@ function generate(recipe) {
   return {
     meta:{camera:recipe.camera??{target:[0,.6,0],dist:16,yaw:-.35,pitch:.60},
       count:rows.length/12,background,palette,water:waterInfo,effect,
+      ...(fluid.length?{fluid}:{}),
       ...(motion?{motion:{first:firstMoving,groups:motion.groups}}:{}),
       ...(recipe.walk ? {walk:walking.bake(recipe.walk,terrain.radius,radial,height,aperture,shapes),avatar:avatar.pixels} : {})},
     rows:Float32Array.from(rows),shapePositions

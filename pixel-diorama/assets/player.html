@@ -53,11 +53,13 @@ button:disabled{opacity:.42;cursor:default}
   </footer>
 </main>
 <script id="scene" type="application/json">__SCENE__</script>
+<script id="recipe-source" type="application/octet-stream">__RECIPE_SOURCE__</script>
 <script>
 'use strict';
 
 __WALKING__
 __MOTION__
+__FLUID__
 
 const canvas = document.getElementById('canvas');
 const poster = document.getElementById('poster');
@@ -79,11 +81,11 @@ uniform vec3 right, up, target;
 uniform vec2 grid;
 uniform float scale;
 uniform int mirror;
-uniform float waterLevel;
+uniform float waterLevel, phase;
 out vec2 pixelShift;
 flat out vec3 ellipse, tint;
 flat out float opacity, type;
-flat out vec2 surface;
+flat out vec3 surface;
 const vec2 corners[4] = vec2[](vec2(-1.,-1.),vec2(1.,-1.),vec2(-1.,1.),vec2(1.,1.));
 
 void main() {
@@ -94,7 +96,7 @@ void main() {
   vec4 b = texelFetch(geometry, cell + ivec2(2,0), 0);
   type = b.w;
   opacity = p.w;
-  surface = p.xz;
+  surface = p.xyz;
   float rgb = a.w;
   tint = vec3(mod(rgb, 256.),mod(floor(rgb/256.),256.),floor(rgb/65536.)) / 255.;
   if (mirror == 1 && (p.y <= waterLevel + .005 || type > .5)) {
@@ -118,6 +120,13 @@ void main() {
   float d = max(.0001, xx*yy - xy*xy);
   ellipse = vec3(yy,-xy,xx)/d;
   pixelShift = corners[gl_VertexID] * 3.05 * sqrt(vec2(xx,yy));
+  if (type>=5.0 && type<6.0) {
+    float t=fract(type), envelope=smoothstep(0.,.22,t)*(1.-smoothstep(.83,1.,t));
+    float pulse=phase*12.-t*6.2831853;
+    float crossflow=p.x*13.+p.z*9.;
+    p.xyz+=envelope*vec3(.041*sin(2.*pulse+crossflow),.014*sin(pulse-crossflow),
+      .046*cos(pulse+crossflow)+.023*cos(2.*pulse-crossflow));
+  }
   vec3 pos = p.xyz - target;
   vec2 center = vec2(dot(right,pos),dot(up,pos))*scale;
   gl_Position = vec4(2.0 * (center + pixelShift) / grid,0.,1.);
@@ -131,11 +140,13 @@ uniform vec2 grid;
 uniform float phase, reflectionGain;
 uniform vec2 rippleA, rippleB;
 uniform vec3 waterDark, waterLight;
+uniform vec3 impacts[6];
+uniform int impactCount;
 uniform int mirror;
 in vec2 pixelShift;
 flat in vec3 ellipse,tint;
 flat in float opacity,type;
-flat in vec2 surface;
+flat in vec3 surface;
 out vec4 paint;
 
 void main() {
@@ -144,21 +155,39 @@ void main() {
   if (power > 9.0) discard;
   float weight = opacity * exp(-.5 * power);
   float alpha = opacity >= 1.0 && (type < .5 || type > 3.5) ? .99 * smoothstep(.38,.62,weight) : min(.94,weight);
+  if(type>=5.0 && type<6.0) alpha*=.77;
   if (alpha < .008) discard;
   vec3 color = tint;
   if (type > .5 && type < 1.5 && mirror == 0) {
-    vec2 p = surface;
+    vec2 p = surface.xz;
     float d1=length(p-rippleA), d2=length(p-rippleB);
     float waveA=cos(13.4*d1-phase*4.0), waveB=cos(11.2*d2-phase*3.0);
     float a=waveA*exp(-2.5*d1*d1), b=waveB*exp(-1.7*d2*d2);
-    vec2 distortion = vec2(a,b)*1.50;
+    float wash=0.;
+    for (int i=0;i<6;i++) {
+      if (i>=impactCount) break;
+      vec2 fromHit=p-impacts[i].xy;
+      float reach=length(fromHit)/impacts[i].z;
+      float crest=cos(reach*21.-phase*7.+.7*sin(5.*fromHit.x+3.*fromHit.y));
+      wash+=smoothstep(.24,.93,crest)*exp(-1.7*reach*reach)*smoothstep(.05,.27,reach);
+    }
+    vec2 distortion = vec2(a+wash*.45,b)*1.50;
     vec4 reflected = texture(reflections,(gl_FragCoord.xy + distortion)/grid);
     vec3 water = mix(waterDark,waterLight,.52 + .14*a + .09*b + .07*sin(p.x*1.7+p.y*2.1));
     water = mix(water,tint,.24);
     float rings = .64*smoothstep(.26,.86,a) + .36*smoothstep(.26,.82,b);
-    color = mix(water,waterLight,rings*.36);
+    color = mix(water,waterLight,min(.78,rings*.36+wash*.56));
     color = color * (1.0 - reflected.a*reflectionGain) + reflected.rgb*reflectionGain;
     alpha = min(.9,1.28*alpha);
+  }
+  if(type>=5.0) {
+    float travel=fract(type);
+    float across=surface.x*14.+surface.z*9.;
+    float runs=phase*(type<6.0?12.:6.)-travel*6.2831853;
+    float veer=sin(across*.29+runs);
+    float churn=.55*sin(across+runs+veer)+.29*sin(across*.43+2.*runs)+.16*cos(across*1.92+2.*runs);
+    float gleam=smoothstep(.25,.82,churn);
+    color=tint*mix(.76,1.27,gleam);
   }
   paint = vec4(color,alpha);
 }
@@ -249,12 +278,16 @@ function createRenderer(gl, scene, shape) {
   geometry.set(shape);
   const images = { reflection: framebuffer(gl), color: framebuffer(gl) };
   const shapeTex = texture(gl,POINTS_PER_ROW*3,rows,gl.RGBA32F,geometry);
-  const firstDynamicRow = Math.floor((scene.motion?.first??staticCount)/POINTS_PER_ROW);
+  const flows=scene.fluid??[];
+  const particles=sceneFluid?.prepare(flows);
+  const hits=flows.filter(({at,delta,falls})=>falls&&water&&Math.abs(at[1]+delta[1]-water.level)<.12).slice(0,6);
+  const firstFluid=flows[0]?.first??staticCount;
+  const firstDynamicRow = Math.floor(Math.min(firstFluid,scene.motion?.first??staticCount)/POINTS_PER_ROW);
   const dynamicRows = geometry.subarray(firstDynamicRow*POINTS_PER_ROW*12);
 
   const splat = program(gl,splatVertex,splatFragment);
   const resolve = program(gl,resolveVertex,resolveFragment);
-  const uniforms = Object.fromEntries(['right','up','target','grid','scale','mirror','phase','geometry','reflections','waterLevel','reflectionGain','rippleA','rippleB','waterDark','waterLight']
+  const uniforms = Object.fromEntries(['right','up','target','grid','scale','mirror','phase','geometry','reflections','waterLevel','reflectionGain','rippleA','rippleB','waterDark','waterLight','impacts[0]','impactCount']
     .map(name => [name,gl.getUniformLocation(splat,name)]));
   const sortBuffer = gl.createBuffer();
   const vao = gl.createVertexArray();
@@ -359,6 +392,7 @@ function createRenderer(gl, scene, shape) {
   }
 
   return (yaw,pitch,zoom,time,hero) => {
+    sceneFluid?.apply(flows,particles,time,shape,geometry);
     sceneMotion?.apply(scene.motion.groups,time,shape,geometry);
     animated(time);
     if(scene.walk){
@@ -402,6 +436,9 @@ function createRenderer(gl, scene, shape) {
     gl.uniform1i(uniforms.reflections,1);
     gl.uniform1f(uniforms.waterLevel,water?.level ?? 0);
     gl.uniform1f(uniforms.reflectionGain,water?.reflection ?? 0);
+    gl.uniform1i(uniforms.impactCount,hits.length);
+    if(hits.length) gl.uniform3fv(uniforms['impacts[0]'],
+      hits.flatMap(({at,delta,reach})=>[at[0]+delta[0],at[2]+delta[2],reach*1.55]));
     gl.uniform2fv(uniforms.rippleA,water?.rippleA ?? [0,0]);
     gl.uniform2fv(uniforms.rippleB,water?.rippleB ?? [1,1]);
     gl.uniform3fv(uniforms.waterDark,rgb(water?.dark ?? 0x225960));
@@ -411,7 +448,7 @@ function createRenderer(gl, scene, shape) {
     gl.uniform3fv(uniforms.target,scene.camera.target);
     gl.uniform2f(uniforms.grid,width,height);
     gl.uniform1f(uniforms.scale,zoom*height/(2*scene.camera.dist*Math.tan(19*Math.PI/180)));
-    gl.uniform1f(uniforms.phase,time/8*TAU);
+    gl.uniform1f(uniforms.phase,(time%8)/8*TAU);
     gl.enable(gl.BLEND);
 
     gl.activeTexture(gl.TEXTURE1);
@@ -556,7 +593,7 @@ async function start() {
   });
   function animate(now) {
     const dt=now-previous;
-    if (dt>=((exploring||scene.motion)?30:55) || !previous) {
+    if (dt>=((exploring||scene.motion||scene.fluid)?30:55) || !previous) {
       if(previous&&!document.hidden){
         if(playing)time=(time+Math.min(dt,120)/1000)%8;
         const wasMoving=hero?.moving||hero?.gait>.015;
