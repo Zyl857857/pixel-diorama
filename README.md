@@ -33,7 +33,11 @@ GitHub 上的 HTML 链接用来查看文件。想操作场景，就在本地浏�
 
 ## 安装 Skill
 
-把 [`pixel-diorama/`](pixel-diorama/) 整个目录导入支持 Agent Skills 的客户端。本地 Codex 可以把它放到目标项目的 `.agents/skills/pixel-diorama/` 下。[Codex Skills 文档](https://learn.chatgpt.com/docs/build-skills)
+要导入的是内层目录 [`pixel-diorama/`](pixel-diorama/)，也就是放着 `SKILL.md` 的那一层，不是仓库根目录，也不是 GitHub zip 解压后的最外层。把这个目录整个交给支持 Agent Skills 的客户端。本地 Codex 把它复制或软链接到目标项目的 `.agents/skills/pixel-diorama/`。[Codex Skills 文档](https://learn.chatgpt.com/docs/build-skills)
+
+用 Codex 打开本仓库时，根目录的 `.agents/skills/pixel-diorama` 已软链接到这个内层目录，会自动发现 Skill。
+
+导入之后，Skill 只带自己目录里的文件。起步用 `assets/recipes/` 里的配方和 `references/` 里的说明。`examples/` 和 `showcase/` 属于本仓库的完整 git 检出，导入后的包里没有；只有在这个检出里工作时才去打开。
 
 试试直接描述你想看的画面。
 
